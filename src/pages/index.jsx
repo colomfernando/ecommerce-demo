@@ -1,7 +1,8 @@
 import React from 'react';
+import MainLayout from 'Layout/MainLayout';
 
 const Home = () => {
-  return <div> home</div>;
+  return <MainLayout>sara</MainLayout>;
 };
 
 export default Home;
