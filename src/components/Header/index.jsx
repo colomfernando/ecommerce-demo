@@ -7,8 +7,8 @@ const Header = () => {
     <Styles.Header>
       header
       <Styles.Actions>
-        <Icon name="cart" size={32} />
-        <Icon name="avatar" size={32} />
+        <Icon name="cart" size={28} />
+        <Icon name="avatar" size={28} />
       </Styles.Actions>
     </Styles.Header>
   );
