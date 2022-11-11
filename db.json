@@ -1,3 +1,18 @@
 {
-  "products": [{ "test": 1 }]
+  "products": [
+    {
+      "id": "1231231234",
+      "name": "converse all start",
+      "category": ["1", "3", "5"],
+      "brand": "converse",
+      "skus": [
+        {
+          "skuId": "234",
+          "listPrice": "50.00",
+          "bestPrice": "45.00",
+          "image": "url image"
+        }
+      ]
+    }
+  ]
 }

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import breakpoints from './breakpoints';
 
 const GlobalStyles = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -12,10 +13,13 @@ html {
   line-height: 1; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 	box-sizing: border-box;
-	font-size: 14px;
+	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
 	height: 100%;
+	${breakpoints.lg} {
+		font-size: 18px
+	}
 }
 *, *:before, *:after {
   box-sizing: inherit;
