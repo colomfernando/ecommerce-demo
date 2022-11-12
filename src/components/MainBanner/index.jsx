@@ -4,7 +4,7 @@ import Styles from './styles';
 
 const MainBanner = () => {
   return (
-    <Swiper pagination={{ clickable: true }}>
+    <Swiper loop pagination={{ clickable: true }}>
       <Styles.Wrapper>
         <Styles.Banner src={`${process.env.PUBLIC_URL}/assets/banner-1.png`} />
       </Styles.Wrapper>

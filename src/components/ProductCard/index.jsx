@@ -18,9 +18,9 @@ const mock = {
   ],
 };
 
-const ProductCard = () => {
+const ProductCard = ({ ...props }) => {
   return (
-    <Styles.Wrapper>
+    <Styles.Wrapper {...props}>
       <Styles.WrapperImage>
         <Styles.Image
           src={`${process.env.PUBLIC_URL}/assets/products/${mock.images[0]}`}

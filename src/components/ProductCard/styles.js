@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 300px;
+  max-width: 260px;
   border-radius: 8px;
   display: flex;
   flex-flow: column nowrap;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   &:hover {
     transform: scale3d(1.03, 1.03, 1);
     z-index: 1;
-    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.9);
   }
 `;
 
