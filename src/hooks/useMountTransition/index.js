@@ -15,7 +15,7 @@ const useMountTransition = (isMounted, unmountDelay) => {
       clearTimeout(timeoutId);
     };
   }, [isMounted, unmountDelay, isTransitioning]);
-  console.log('isTransitioning :>> ', isTransitioning);
+
   return isTransitioning;
 };
 
