@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Swiper as SwiperComp, SwiperSlide } from 'swiper/react';
+import breakpoints from 'theme/breakpoints';
 import colors from 'theme/colors';
 
 const typeNavigation = {
@@ -48,9 +49,12 @@ const Swiper = styled(SwiperComp)`
     bottom: 0;
 
     &-bullet {
-      width: 30px;
+      width: 15px;
       height: 5px;
       border-radius: 5px;
+      ${breakpoints.md} {
+        width: 30px;
+      }
     }
   }
 

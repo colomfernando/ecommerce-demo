@@ -9,8 +9,22 @@ const ProductSlider = ({ title, children, ...props }) => {
       {title && <Styles.Title>{title}</Styles.Title>}
       <Swiper
         type="productSlider"
-        slidesPerView={5}
+        slidesPerView={1}
         pagination={{ clickable: true }}
+        breakpoints={{
+          600: {
+            slidesPerView: 2,
+          },
+          960: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 4,
+          },
+          1600: {
+            slidesPerView: 5,
+          },
+        }}
         {...props}
       >
         {children}

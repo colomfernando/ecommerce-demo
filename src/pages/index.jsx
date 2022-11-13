@@ -15,16 +15,8 @@ const Home = () => {
         <ProductCard />
         <ProductCard />
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </ProductSlider>
       <ProductSlider navigation title="Sale Products">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />
