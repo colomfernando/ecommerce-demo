@@ -5,15 +5,16 @@ class OrderForm {
       items: [
         {
           id: '1231231234',
-          name: 'converse all start',
+          name: 'Converse All Star',
           category: ['1', '3', '5'],
           brand: 'converse',
+          skuId: '234',
           skus: [
             {
               skuId: '234',
               listPrice: '50.00',
               bestPrice: '45.00',
-              image: 'url image',
+              images: ['123.png'],
             },
           ],
         },

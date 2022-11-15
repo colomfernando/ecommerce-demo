@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import colors from 'theme/colors';
 import Prices from 'components/Prices';
 import Button from 'components/Button';
+import ProductImage from 'components/ProductImage';
+import ProductBrand from 'components/ProductBrand';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,29 +22,22 @@ const Wrapper = styled.div`
   }
 `;
 
-const WrapperImage = styled.div`
-  background-color: ${colors.grey[100]};
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-`;
-
 const WrapperInfo = styled.div`
   display: flex;
   flex-flow: column nowrap;
   padding: 10px;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+const Image = styled(ProductImage)`
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 `;
 
 const Name = styled.h4`
   margin-bottom: 10px;
 `;
 
-const Brand = styled.span`
+const Brand = styled(ProductBrand)`
   margin: 15px 0 5px;
   font-size: 0.8rem;
   color: ${colors.grey[600]};
@@ -62,7 +57,6 @@ export default {
   Wrapper,
   Image,
   Brand,
-  WrapperImage,
   WrapperInfo,
   Name,
   Price,

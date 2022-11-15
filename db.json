@@ -10,7 +10,7 @@
           "skuId": "234",
           "listPrice": "50.00",
           "bestPrice": "45.00",
-          "image": "url image"
+          "images": ["url image"]
         }
       ]
     }

@@ -3,6 +3,7 @@ import Drawer from 'components/Drawer';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeMinicartAction } from 'store/minicart';
 import ProductCardSmall from 'components/ProductCardSmall';
+import Styles from './styles';
 
 const MiniCart = () => {
   const {
@@ -15,11 +16,21 @@ const MiniCart = () => {
 
   return (
     <Drawer isOpen={minicart.isOpen} onClose={handleOnClose}>
-      {items.length
-        ? items.map((item, idx) => (
+      <Styles.Wrapper>
+        <Styles.Header>
+          <Styles.Title>Cart</Styles.Title>
+          <Styles.TrashButton baseButton>
+            <Styles.IconTrash size={20} name="trash" />
+          </Styles.TrashButton>
+        </Styles.Header>
+        {!!items && items.length ? (
+          items.map((item, idx) => (
             <ProductCardSmall key={`${item.id}-${idx}`} {...item} />
           ))
-        : null}
+        ) : (
+          <p>carrito vacio</p>
+        )}
+      </Styles.Wrapper>
     </Drawer>
   );
 };

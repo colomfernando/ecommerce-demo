@@ -8,6 +8,7 @@ const mock = {
   images: ['123.png'],
   category: ['1', '3', '5'],
   brand: 'Nike',
+  skuId: '123',
   skus: [
     {
       skuId: '234',
@@ -21,11 +22,9 @@ const mock = {
 const ProductCard = ({ ...props }) => {
   return (
     <Styles.Wrapper {...props}>
-      <Styles.WrapperImage>
-        <Styles.Image
-          src={`${process.env.PUBLIC_URL}/assets/products/${mock.images[0]}`}
-        />
-      </Styles.WrapperImage>
+      <Styles.Image
+        src={`${process.env.PUBLIC_URL}/assets/products/${mock.images[0]}`}
+      />
       <Styles.WrapperInfo>
         <Styles.Brand>{mock.brand}</Styles.Brand>
         <Styles.Name>{mock.name}</Styles.Name>
