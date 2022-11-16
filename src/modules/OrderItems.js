@@ -30,7 +30,7 @@ class OrderItems extends OrderForm {
    */
   removeAll(cb) {
     const order = this.getOrder;
-    return this.save({ ...order, items: [] }, cb);
+    return this.saveOrder({ ...order, items: [] }, cb);
   }
 }
 

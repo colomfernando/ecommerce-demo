@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import colors from 'theme/colors';
 
 const mapSize = {
-  small: '90px',
+  small: '80px',
   medium: '260px',
   large: '400px',
 };

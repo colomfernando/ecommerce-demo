@@ -14,11 +14,11 @@ const Image = styled(ProductImage)``;
 const WrapperInfo = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  margin-left: 15px;
+  margin-left: 10px;
 `;
 
 const Name = styled.h4`
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const Brand = styled(ProductBrand)`
