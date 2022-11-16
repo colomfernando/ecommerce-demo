@@ -25,10 +25,14 @@ const Title = styled.p`
   text-transform: capitalize;
 `;
 
-const Products = styled.div`
+const ProductList = styled.ul`
   height: calc(100vh - 160px);
   overflow: scroll;
   overflow-x: hidden;
+`;
+
+const Product = styled.li`
+  padding: 10px 0;
 `;
 
 const TrashButton = styled(Button)``;
@@ -59,7 +63,8 @@ export default {
   IconTrash,
   CloseButton,
   IconClose,
-  Products,
+  ProductList,
+  Product,
   TrashButton,
   Title,
   Resume,

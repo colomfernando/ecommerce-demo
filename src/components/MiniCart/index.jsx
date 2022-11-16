@@ -36,7 +36,7 @@ const MiniCart = () => {
           </Styles.TrashButton>
         </Styles.Header>
         {hasItems ? (
-          <Styles.Products>
+          <Styles.ProductList>
             {[
               ...items,
               ...items,
@@ -51,9 +51,12 @@ const MiniCart = () => {
               ...items,
               ...items,
             ].map((item, idx) => (
-              <ProductCardSmall key={`${item.id}-${idx}`} {...item} />
+              <Styles.Product key={`${item.id}-${idx}`}>
+                {' '}
+                <ProductCardSmall {...item} />
+              </Styles.Product>
             ))}
-          </Styles.Products>
+          </Styles.ProductList>
         ) : (
           <p>carrito vacio</p>
         )}
