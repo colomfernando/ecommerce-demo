@@ -27,7 +27,7 @@ const Title = styled.p`
 
 const ProductList = styled.ul`
   height: calc(100vh - 160px);
-  overflow: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 `;
 

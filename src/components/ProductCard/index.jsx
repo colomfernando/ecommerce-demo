@@ -32,6 +32,7 @@ const ProductCard = ({ ...props }) => {
           listPrice={mock.skus[0].listPrice}
           bestPrice={mock.skus[0].bestPrice}
         />
+        <Styles.Qty />
         <Styles.BuyButton>Buy</Styles.BuyButton>
       </Styles.WrapperInfo>
     </Styles.Wrapper>

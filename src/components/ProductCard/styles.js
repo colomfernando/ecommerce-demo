@@ -4,6 +4,7 @@ import Prices from 'components/Prices';
 import Button from 'components/Button';
 import ProductImage from 'components/ProductImage';
 import ProductBrand from 'components/ProductBrand';
+import QtySelector from 'components/QtySelector';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -47,9 +48,11 @@ const Price = styled(Prices)`
   margin: 10px 0 10px; ;
 `;
 
-const BuyButton = styled(Button)`
-  margin-top: 10px;
+const Qty = styled(QtySelector)`
+  margin: 15px 0;
 `;
+
+const BuyButton = styled(Button)``;
 
 Wrapper.displayName = 'ProductCard';
 
@@ -60,5 +63,6 @@ export default {
   WrapperInfo,
   Name,
   Price,
+  Qty,
   BuyButton,
 };

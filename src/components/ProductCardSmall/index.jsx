@@ -20,6 +20,7 @@ const ProductCardSmall = ({ name, brand, skuId, skus }) => {
         <Styles.Name>{ellipsisText(name, 20)}</Styles.Name>
         <Styles.Prices listPrice={34} bestPrice={30} />
       </Styles.WrapperInfo>
+      <Styles.Qty type="vertical" />
     </Styles.Wrapper>
   );
 };

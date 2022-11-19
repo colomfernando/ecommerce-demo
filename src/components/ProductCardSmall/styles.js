@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ProductImage from 'components/ProductImage';
 import ProductBrand from 'components/ProductBrand';
 import ProductPrices from 'components/Prices';
+import QtySelector from 'components/QtySelector';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const WrapperInfo = styled.div`
 
 const Name = styled.h4`
   margin-bottom: 5px;
+  font-size: 0.85rem;
 `;
 
 const Brand = styled(ProductBrand)`
@@ -29,6 +31,11 @@ const Prices = styled(ProductPrices)`
   margin-top: auto;
 `;
 
+const Qty = styled(QtySelector)`
+  margin-left: auto;
+  margin-right: 5px;
+`;
+
 Wrapper.displayName = 'ProductCardSmall';
 
-export default { Wrapper, Image, WrapperInfo, Name, Brand, Prices };
+export default { Wrapper, Image, WrapperInfo, Name, Brand, Prices, Qty };

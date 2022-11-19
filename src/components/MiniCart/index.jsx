@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { closeMinicartAction } from 'store/minicart';
 import ProductCardSmall from 'components/ProductCardSmall';
 import OrderItems from 'modules/OrderItems';
+
 import Styles from './styles';
 import { saveOrderAction } from 'store/order';
 
@@ -35,24 +36,11 @@ const MiniCart = () => {
             <Styles.IconTrash size={20} name="trash" />
           </Styles.TrashButton>
         </Styles.Header>
+
         {hasItems ? (
           <Styles.ProductList>
-            {[
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-              ...items,
-            ].map((item, idx) => (
+            {[...items, ...items].map((item, idx) => (
               <Styles.Product key={`${item.id}-${idx}`}>
-                {' '}
                 <ProductCardSmall {...item} />
               </Styles.Product>
             ))}

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import colors from 'theme/colors';
 
 const Brand = styled.span`
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: capitalize;
   color: ${colors.grey[600]};
 `;
