@@ -3,25 +3,97 @@
     {
       "name": "Women",
       "value": "Women",
-      "id": 1,
+      "id": "1",
       "children": [
         {
           "name": "Shoes",
           "value": "Shoes",
-          "id": 5,
+          "id": "5",
           "children": [
-            { "name": "Sneakers", "value": "Sneakers", "id": 8, "children": [] }
+            {
+              "name": "Running",
+              "value": "Running",
+              "id": "17",
+              "children": []
+            },
+            {
+              "name": "Sneakers",
+              "value": "Sneakers",
+              "id": "18",
+              "children": []
+            },
+            {
+              "name": "Outdoor",
+              "value": "Outdoor",
+              "id": "19",
+              "children": []
+            },
+            {
+              "name": "Sandals",
+              "value": "Sandals",
+              "id": "20",
+              "children": []
+            }
           ]
         },
         {
           "name": "Clothing",
           "value": "Clothing",
-          "id": 12,
+          "id": "6",
           "children": [
             {
               "name": "Pants",
               "value": "Pants",
-              "id": 13,
+              "id": "21",
+              "children": []
+            },
+            {
+              "name": "T-Shirts",
+              "value": "T-Shirts",
+              "id": "22",
+              "children": []
+            },
+            {
+              "name": "Shorts",
+              "value": "Shorts",
+              "id": "23",
+              "children": []
+            },
+            {
+              "name": "Jackets",
+              "value": "Jackets",
+              "id": "24",
+              "children": []
+            },
+            {
+              "name": "Hoodies",
+              "value": "Hoodies",
+              "id": "25",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "value": "Accessories",
+          "id": "7",
+          "children": [
+            {
+              "name": "Bags",
+              "value": "Bags",
+              "id": "26",
+              "children": []
+            },
+            {
+              "name": "Socks",
+              "value": "Socks",
+              "id": "27",
+              "children": []
+            },
+            {
+              "name": "Hats",
+              "value": "Hats",
+              "id": "28",
               "children": []
             }
           ]
@@ -31,25 +103,97 @@
     {
       "name": "Men",
       "value": "Men",
-      "id": 2,
+      "id": "2",
       "children": [
         {
           "name": "Shoes",
           "value": "Shoes",
-          "id": 6,
+          "id": "8",
           "children": [
-            { "name": "Sneakers", "value": "Sneakers", "id": 9, "children": [] }
+            {
+              "name": "Running",
+              "value": "Running",
+              "id": "29",
+              "children": []
+            },
+            {
+              "name": "Sneakers",
+              "value": "Sneakers",
+              "id": "30",
+              "children": []
+            },
+            {
+              "name": "Outdoor",
+              "value": "Outdoor",
+              "id": "31",
+              "children": []
+            },
+            {
+              "name": "Sandals",
+              "value": "Sandals",
+              "id": "32",
+              "children": []
+            }
           ]
         },
         {
           "name": "Clothing",
           "value": "Clothing",
-          "id": 14,
+          "id": "9",
           "children": [
             {
               "name": "Pants",
               "value": "Pants",
-              "id": 15,
+              "id": "33",
+              "children": []
+            },
+            {
+              "name": "T-Shirts",
+              "value": "T-Shirts",
+              "id": "34",
+              "children": []
+            },
+            {
+              "name": "Shorts",
+              "value": "Shorts",
+              "id": "35",
+              "children": []
+            },
+            {
+              "name": "Jackets",
+              "value": "Jackets",
+              "id": "36",
+              "children": []
+            },
+            {
+              "name": "Hoodies",
+              "value": "Hoodies",
+              "id": "37",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "value": "Accessories",
+          "id": "10",
+          "children": [
+            {
+              "name": "Bags",
+              "value": "Bags",
+              "id": "38",
+              "children": []
+            },
+            {
+              "name": "Socks",
+              "value": "Socks",
+              "id": "39",
+              "children": []
+            },
+            {
+              "name": "Hats",
+              "value": "Hats",
+              "id": "40",
               "children": []
             }
           ]
@@ -59,17 +203,35 @@
     {
       "name": "Kids",
       "value": "Kids",
-      "id": 3,
+      "id": "3",
       "children": [
         {
           "name": "Shoes",
           "value": "Shoes",
-          "id": 7,
+          "id": "11",
           "children": [
+            {
+              "name": "Running",
+              "value": "Running",
+              "id": "41",
+              "children": []
+            },
             {
               "name": "Sneakers",
               "value": "Sneakers",
-              "id": 10,
+              "id": "42",
+              "children": []
+            },
+            {
+              "name": "Outdoor",
+              "value": "Outdoor",
+              "id": "43",
+              "children": []
+            },
+            {
+              "name": "Sandals",
+              "value": "Sandals",
+              "id": "44",
               "children": []
             }
           ]
@@ -77,12 +239,61 @@
         {
           "name": "Clothing",
           "value": "Clothing",
-          "id": 16,
+          "id": "12",
           "children": [
             {
               "name": "Pants",
               "value": "Pants",
-              "id": 17,
+              "id": "45",
+              "children": []
+            },
+            {
+              "name": "T-Shirts",
+              "value": "T-Shirts",
+              "id": "46",
+              "children": []
+            },
+            {
+              "name": "Shorts",
+              "value": "Shorts",
+              "id": "47",
+              "children": []
+            },
+            {
+              "name": "Jackets",
+              "value": "Jackets",
+              "id": "48",
+              "children": []
+            },
+            {
+              "name": "Hoodies",
+              "value": "Hoodies",
+              "id": "49",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "value": "Accessories",
+          "id": "13",
+          "children": [
+            {
+              "name": "Bags",
+              "value": "Bags",
+              "id": "50",
+              "children": []
+            },
+            {
+              "name": "Socks",
+              "value": "Socks",
+              "id": "51",
+              "children": []
+            },
+            {
+              "name": "Hats",
+              "value": "Hats",
+              "id": "52",
               "children": []
             }
           ]
@@ -92,32 +303,98 @@
     {
       "name": "Sale",
       "value": "Sale",
-      "id": 4,
+      "id": "4",
       "children": [
         {
           "name": "Shoes",
           "value": "Shoes",
-          "id": 8,
+          "id": "14",
           "children": [
+            {
+              "name": "Running",
+              "value": "Running",
+              "id": "53",
+              "children": []
+            },
             {
               "name": "Sneakers",
               "value": "Sneakers",
-              "id": 1,
-              "children": [
-                {
-                  "name": "Men",
-                  "value": "Men",
-                  "id": 11,
-                  "children": [
-                    {
-                      "name": "Sneakers",
-                      "value": "Sneakers",
-                      "id": 18,
-                      "children": []
-                    }
-                  ]
-                }
-              ]
+              "id": "54",
+              "children": []
+            },
+            {
+              "name": "Outdoor",
+              "value": "Outdoor",
+              "id": "55",
+              "children": []
+            },
+            {
+              "name": "Sandals",
+              "value": "Sandals",
+              "id": "56",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Clothing",
+          "value": "Clothing",
+          "id": "15",
+          "children": [
+            {
+              "name": "Pants",
+              "value": "Pants",
+              "id": "57",
+              "children": []
+            },
+            {
+              "name": "T-Shirts",
+              "value": "T-Shirts",
+              "id": "58",
+              "children": []
+            },
+            {
+              "name": "Shorts",
+              "value": "Shorts",
+              "id": "59",
+              "children": []
+            },
+            {
+              "name": "Jackets",
+              "value": "Jackets",
+              "id": "60",
+              "children": []
+            },
+            {
+              "name": "Hoodies",
+              "value": "Hoodies",
+              "id": "61",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "value": "Accessories",
+          "id": "16",
+          "children": [
+            {
+              "name": "Bags",
+              "value": "Bags",
+              "id": "62",
+              "children": []
+            },
+            {
+              "name": "Socks",
+              "value": "Socks",
+              "id": "63",
+              "children": []
+            },
+            {
+              "name": "Hats",
+              "value": "Hats",
+              "id": "64",
+              "children": []
             }
           ]
         }

@@ -6,7 +6,7 @@ import App from './App';
 import { store } from 'store';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
