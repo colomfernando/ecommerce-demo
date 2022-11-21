@@ -31,13 +31,6 @@
             "link": "/women/shoes/outdoor",
             "id": 19,
             "children": []
-          },
-          {
-            "name": "Sandals",
-            "value": "Sandals",
-            "link": "/women/shoes/sandals",
-            "id": 20,
-            "children": []
           }
         ]
       },
@@ -66,13 +59,6 @@
             "value": "Shorts",
             "link": "/women/clothing/shorts",
             "id": 23,
-            "children": []
-          },
-          {
-            "name": "Jackets",
-            "value": "Jackets",
-            "link": "/women/clothing/jackets",
-            "id": 24,
             "children": []
           },
           {
@@ -139,13 +125,6 @@
             "value": "Sneakers",
             "link": "/men/shoes/sneakers",
             "id": 30,
-            "children": []
-          },
-          {
-            "name": "Outdoor",
-            "value": "Outdoor",
-            "link": "/men/shoes/outdoors",
-            "id": 31,
             "children": []
           },
           {

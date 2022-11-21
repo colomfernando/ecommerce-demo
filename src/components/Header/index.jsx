@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { openMinicartAction } from 'store/minicart';
 import getCategories from 'services/categories/getCategories';
 import { useQuery } from 'react-query';
-import CategoriesDesktop from 'components/Categories';
+import Navigation from 'components/Navigation';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const Header = () => {
         </Styles.Actions>
         <MiniCart />
       </Styles.InnerHeader>
-      <CategoriesDesktop categories={data} />
+      <Navigation categories={data} />
     </Styles.Header>
   );
 };
