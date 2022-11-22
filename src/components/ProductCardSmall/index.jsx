@@ -1,19 +1,19 @@
 import { arrayOf, shape, string } from 'prop-types';
 import React from 'react';
-import getImagesProduct from 'utils/getImagesProduct';
 import Styles from './styles';
 import ellipsisText from 'utils/ellipsisText';
 
-const ProductCardSmall = ({ name, brand, skuId, skus }) => {
+const ProductCardSmall = ({ name, brand, skuId, images }) => {
   if (!name || !skuId) return null;
 
-  const images = getImagesProduct({ skuId, skus });
+  const imageToShow = images[0] || null;
 
   return (
     <Styles.Wrapper>
       <Styles.Image
         size="small"
-        src={`${process.env.PUBLIC_URL}/assets/products/${images[0]}`}
+        src={`${process.env.PUBLIC_URL}/assets/products/${imageToShow.url}`}
+        alt={imageToShow.alt}
       />
       <Styles.WrapperInfo>
         <Styles.Brand>{brand}</Styles.Brand>
@@ -29,9 +29,10 @@ ProductCardSmall.propTypes = {
   name: string.isRequired,
   skuId: string.isRequired,
   brand: string,
-  skus: arrayOf(
+  images: arrayOf(
     shape({
-      images: arrayOf(string),
+      url: string,
+      alt: string,
     })
   ).isRequired,
 };

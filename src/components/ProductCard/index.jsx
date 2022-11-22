@@ -1,42 +1,55 @@
 /* eslint-disable no-undef */
+import { arrayOf, number, shape, string } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
+import useAddToCart from 'hooks/useAddToCart';
 
-const mock = {
-  id: '123',
-  name: 'Nike Air Jordan M1',
-  images: ['123.png'],
-  category: ['1', '3', '5'],
-  brand: 'Nike',
-  skuId: '123',
-  skus: [
-    {
-      skuId: '234',
-      listPrice: 50.3233,
-      bestPrice: 45.24,
-      image: 'url image',
-    },
-  ],
-};
+const ProductCard = ({
+  name,
+  bestPrice,
+  listPrice,
+  brand,
+  skuId,
+  images,
+  ...props
+}) => {
+  const imageToShow = images[0] || null;
+  const { qty } = useAddToCart(skuId);
 
-const ProductCard = ({ ...props }) => {
   return (
     <Styles.Wrapper {...props}>
       <Styles.Image
-        src={`${process.env.PUBLIC_URL}/assets/products/${mock.images[0]}`}
+        src={`${process.env.PUBLIC_URL}/assets/products/${imageToShow.url}`}
+        alt={imageToShow.alt}
       />
       <Styles.WrapperInfo>
-        <Styles.Brand>{mock.brand}</Styles.Brand>
-        <Styles.Name>{mock.name}</Styles.Name>
-        <Styles.Price
-          listPrice={mock.skus[0].listPrice}
-          bestPrice={mock.skus[0].bestPrice}
-        />
-        <Styles.Qty />
+        <Styles.Brand>{brand}</Styles.Brand>
+        <Styles.Name>{name}</Styles.Name>
+        <Styles.Price listPrice={listPrice} bestPrice={bestPrice} />
+        <Styles.Qty qty={qty} />
         <Styles.BuyButton>Buy</Styles.BuyButton>
       </Styles.WrapperInfo>
     </Styles.Wrapper>
   );
 };
 
+ProductCard.propTypes = {
+  brand: string,
+  bestPrice: number,
+  skuId: string.isRequired,
+  listPrice: number.isRequired,
+  name: string.isRequired,
+  images: arrayOf(
+    shape({
+      url: string,
+      alt: string,
+    })
+  ),
+};
+
+ProductCard.defaultProps = {
+  brand: '',
+  bestPrice: null,
+  images: [],
+};
 export default ProductCard;

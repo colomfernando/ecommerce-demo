@@ -39,7 +39,7 @@ const MiniCart = () => {
 
         {hasItems ? (
           <Styles.ProductList>
-            {[...items, ...items].map((item, idx) => (
+            {items.map((item, idx) => (
               <Styles.Product key={`${item.id}-${idx}`}>
                 <ProductCardSmall {...item} />
               </Styles.Product>

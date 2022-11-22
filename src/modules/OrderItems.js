@@ -11,6 +11,18 @@ class OrderItems extends OrderForm {
   }
 
   /**
+   * If the id is not defined, return an empty object, otherwise return the item from the order that
+   * matches the id.
+   * @param id - The id of the item you want to get.
+   * @returns The item with the matching id.
+   */
+  getItemBySkuId(skuId) {
+    if (!skuId) return {};
+    const order = this.getOrder;
+    return order.items.find((item) => item.skuId === skuId);
+  }
+
+  /**
    * It removes an item from the order
    * @param id - The id of the item to be removed.
    * @param cb - callback function
