@@ -1,9 +1,11 @@
-import products from '../db/products.json';
 class OrderForm {
   constructor() {
     this.KEY_CACHE = 'orderForm';
     this.DEFAULT_DATA = {
-      items: [products[0]],
+      items: [],
+      totals: {
+        items: 0,
+      },
     };
   }
 

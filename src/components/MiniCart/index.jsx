@@ -7,14 +7,14 @@ import OrderItems from 'modules/OrderItems';
 import Styles from './styles';
 import { saveOrderAction } from 'store/order';
 
+const itemsActions = new OrderItems();
+
 const MiniCart = () => {
   const {
     minicart,
     order: { items },
   } = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  const itemsActions = new OrderItems();
 
   const handleRemoveAll = () => {
     itemsActions.removeAll(() => dispatch(saveOrderAction()));
@@ -49,6 +49,7 @@ const MiniCart = () => {
         )}
         {!!hasItems && (
           <Styles.Resume>
+            <Styles.Total />
             <Styles.FinishBuy>Checkout</Styles.FinishBuy>
           </Styles.Resume>
         )}

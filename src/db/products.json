@@ -20,7 +20,6 @@
     "brand": "nike",
     "brandId": "1233",
     "listPrice": 50.0,
-    "bestPrice": 45.0,
     "images": [{ "url": "id_23-1.png", "alt": "nike air jordan" }],
     "skuId": "233",
     "qty": 2

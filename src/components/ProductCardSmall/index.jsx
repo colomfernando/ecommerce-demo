@@ -1,10 +1,18 @@
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, number, shape, string } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
 import ellipsisText from 'utils/ellipsisText';
 import useCart from 'hooks/useCart';
 
-const ProductCardSmall = ({ name, brand, skuId, images, ...props }) => {
+const ProductCardSmall = ({
+  name,
+  brand,
+  skuId,
+  listPrice,
+  bestPrice,
+  images,
+  ...props
+}) => {
   if (!name || !skuId) return null;
   const { qty, updateItem } = useCart(skuId);
 
@@ -20,7 +28,7 @@ const ProductCardSmall = ({ name, brand, skuId, images, ...props }) => {
       <Styles.WrapperInfo>
         <Styles.Brand>{brand}</Styles.Brand>
         <Styles.Name>{ellipsisText(name, 20)}</Styles.Name>
-        <Styles.Prices listPrice={34} bestPrice={30} />
+        <Styles.Prices listPrice={listPrice} bestPrice={bestPrice} />
       </Styles.WrapperInfo>
       <Styles.Qty
         qty={qty}
@@ -35,6 +43,8 @@ const ProductCardSmall = ({ name, brand, skuId, images, ...props }) => {
 ProductCardSmall.propTypes = {
   name: string.isRequired,
   skuId: string.isRequired,
+  listPrice: number.isRequired,
+  bestPrice: number,
   brand: string,
   images: arrayOf(
     shape({
@@ -46,6 +56,7 @@ ProductCardSmall.propTypes = {
 
 ProductCardSmall.defaultProps = {
   brand: null,
+  bestPrice: null,
 };
 
 export default ProductCardSmall;

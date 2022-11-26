@@ -3,6 +3,7 @@ import Button from 'components/Button';
 import Icon from 'components/Icon';
 import colors from 'theme/colors';
 import EmptyCartMessage from 'components/EmptyCartMessage';
+import TotalCart from 'components/TotalCart';
 
 const Wrapper = styled.div`
   display: flex;
@@ -45,7 +46,7 @@ const IconClose = styled(Icon)``;
 
 const Resume = styled.div`
   position: absolute;
-  padding: 15px 10px;
+  padding: 15px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -57,6 +58,10 @@ const EmptyCart = styled(EmptyCartMessage)`
   & > p {
     margin-top: 40px;
   }
+`;
+
+const Total = styled(TotalCart)`
+  margin-bottom: 20px;
 `;
 
 const FinishBuy = styled(Button)`
@@ -77,5 +82,6 @@ export default {
   Title,
   EmptyCart,
   Resume,
+  Total,
   FinishBuy,
 };

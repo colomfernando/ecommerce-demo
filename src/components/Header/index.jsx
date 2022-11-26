@@ -18,7 +18,7 @@ const Header = () => {
   });
 
   const handleMinicartOnClick = () => dispatch(openMinicartAction());
-  console.log('items :>> ', items);
+
   return (
     <Styles.Header>
       <Styles.InnerHeader>
