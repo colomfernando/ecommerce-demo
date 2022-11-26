@@ -36,10 +36,37 @@ const Name = styled.p`
 
 const Actions = styled.div``;
 
-const ButtonAction = styled(Button)`
+const ButtonActionBase = styled(Button)`
   :not(:last-child) {
     margin-right: 20px;
   }
+`;
+
+const ButtonActionCart = styled(ButtonActionBase)`
+  position: relative;
+`;
+
+const ButtonAction = styled(ButtonActionBase)`
+  :not(:last-child) {
+    margin-right: 20px;
+  }
+`;
+
+const ItemsQty = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.primary.main};
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 100%;
+  text-align: center;
+  color: ${colors.white};
+  position: absolute;
+  top: 5px;
+  right: 5px;
 `;
 
 Header.displayName = 'Header';
@@ -48,6 +75,8 @@ export default {
   Actions,
   InnerHeader,
   ButtonAction,
+  ButtonActionCart,
   LogoWrapper,
+  ItemsQty,
   Name,
 };

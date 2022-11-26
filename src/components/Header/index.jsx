@@ -3,13 +3,14 @@ import Styles from './styles';
 import Icon from 'components/Icon';
 import InputSearch from 'components/InputSearch';
 import MiniCart from 'components/MiniCart';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openMinicartAction } from 'store/minicart';
 import getCategories from 'services/categories/getCategories';
 import { useQuery } from 'react-query';
 import Navigation from 'components/Navigation';
 
 const Header = () => {
+  const { items } = useSelector((state) => state.order);
   const dispatch = useDispatch();
   const { data } = useQuery({
     queryKey: 'categories',
@@ -17,7 +18,7 @@ const Header = () => {
   });
 
   const handleMinicartOnClick = () => dispatch(openMinicartAction());
-
+  console.log('items :>> ', items);
   return (
     <Styles.Header>
       <Styles.InnerHeader>
@@ -27,11 +28,14 @@ const Header = () => {
         </Styles.LogoWrapper>
         <InputSearch />
         <Styles.Actions>
-          <Styles.ButtonAction baseButton onClick={handleMinicartOnClick}>
-            <Icon name="cart" size={28} />
-          </Styles.ButtonAction>
+          <Styles.ButtonActionCart baseButton onClick={handleMinicartOnClick}>
+            {!!items.length && (
+              <Styles.ItemsQty>{items.length}</Styles.ItemsQty>
+            )}
+            <Icon name="cart" size={32} />
+          </Styles.ButtonActionCart>
           <Styles.ButtonAction baseButton>
-            <Icon name="avatar" size={28} />
+            <Icon name="avatar" size={32} />
           </Styles.ButtonAction>
         </Styles.Actions>
         <MiniCart />

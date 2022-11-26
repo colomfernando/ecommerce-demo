@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import colors from 'theme/colors';
+import EmptyCartMessage from 'components/EmptyCartMessage';
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,6 +52,13 @@ const Resume = styled.div`
   box-shadow: rgb(0 0 0 / 25%) 2px 2px 10px 0px;
 `;
 
+const EmptyCart = styled(EmptyCartMessage)`
+  height: 100vh;
+  & > p {
+    margin-top: 40px;
+  }
+`;
+
 const FinishBuy = styled(Button)`
   width: 100%;
 `;
@@ -67,6 +75,7 @@ export default {
   Product,
   TrashButton,
   Title,
+  EmptyCart,
   Resume,
   FinishBuy,
 };

@@ -1,8 +1,7 @@
-/* eslint-disable no-undef */
 import { arrayOf, number, shape, string } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
-import useAddToCart from 'hooks/useAddToCart';
+import useCart from 'hooks/useCart';
 
 const ProductCard = ({
   name,
@@ -14,7 +13,17 @@ const ProductCard = ({
   ...props
 }) => {
   const imageToShow = images[0] || null;
-  const { qty } = useAddToCart(skuId);
+  const { qty, isItemInOrder, addItem, updateItem } = useCart(skuId);
+
+  const item = {
+    skuId,
+    brand,
+    name,
+    listPrice,
+    bestPrice,
+    images,
+    ...props,
+  };
 
   return (
     <Styles.Wrapper {...props}>
@@ -26,8 +35,19 @@ const ProductCard = ({
         <Styles.Brand>{brand}</Styles.Brand>
         <Styles.Name>{name}</Styles.Name>
         <Styles.Price listPrice={listPrice} bestPrice={bestPrice} />
-        <Styles.Qty qty={qty} />
-        <Styles.BuyButton>Buy</Styles.BuyButton>
+        {isItemInOrder && (
+          <Styles.Qty
+            qty={qty}
+            minusFn={(newQty) => updateItem(skuId, newQty)}
+            plusFn={(newQty) => addItem(item, newQty)}
+          />
+        )}
+        <Styles.BuyButton
+          isItemInOrder={isItemInOrder}
+          onClick={() => addItem(item)}
+        >
+          Buy
+        </Styles.BuyButton>
       </Styles.WrapperInfo>
     </Styles.Wrapper>
   );

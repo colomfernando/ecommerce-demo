@@ -32,6 +32,8 @@ const WrapperInfo = styled.div`
 const Image = styled(ProductImage)`
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 `;
 
 const Name = styled.h4`
@@ -49,10 +51,17 @@ const Price = styled(Prices)`
 `;
 
 const Qty = styled(QtySelector)`
-  margin: 15px 0;
+  margin-top: 15px;
 `;
 
-const BuyButton = styled(Button)``;
+const BuyButton = styled(Button)`
+  margin-top: 15px;
+  ${({ isItemInOrder }) =>
+    !isItemInOrder &&
+    `
+		margin-top: 74.69px;
+	`}
+`;
 
 Wrapper.displayName = 'ProductCard';
 

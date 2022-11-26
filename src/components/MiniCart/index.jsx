@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { closeMinicartAction } from 'store/minicart';
 import ProductCardSmall from 'components/ProductCardSmall';
 import OrderItems from 'modules/OrderItems';
-
 import Styles from './styles';
 import { saveOrderAction } from 'store/order';
 
@@ -46,9 +45,9 @@ const MiniCart = () => {
             ))}
           </Styles.ProductList>
         ) : (
-          <p>carrito vacio</p>
+          <Styles.EmptyCart />
         )}
-        {hasItems && (
+        {!!hasItems && (
           <Styles.Resume>
             <Styles.FinishBuy>Checkout</Styles.FinishBuy>
           </Styles.Resume>

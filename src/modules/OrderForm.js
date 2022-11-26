@@ -3,7 +3,7 @@ class OrderForm {
   constructor() {
     this.KEY_CACHE = 'orderForm';
     this.DEFAULT_DATA = {
-      items: [...products],
+      items: [products[0]],
     };
   }
 
