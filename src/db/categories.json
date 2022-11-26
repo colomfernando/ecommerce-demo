@@ -69,35 +69,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Accessories",
-        "value": "Accessories",
-        "link": "/women/accessories",
-        "id": 7,
-        "children": [
-          {
-            "name": "Bags",
-            "value": "Bags",
-            "link": "/women/accessories/bags",
-            "id": 26,
-            "children": []
-          },
-          {
-            "name": "Socks",
-            "value": "Socks",
-            "link": "/women/accessories/socks",
-            "id": 27,
-            "children": []
-          },
-          {
-            "name": "Hats",
-            "value": "Hats",
-            "link": "/women/accessories/hats",
-            "id": 28,
-            "children": []
-          }
-        ]
       }
     ]
   },
@@ -175,35 +146,6 @@
             "value": "Hoodies",
             "link": "/men/clothing/hoodies",
             "id": 37,
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Accessories",
-        "value": "Accessories",
-        "link": "/men/accessories",
-        "id": 10,
-        "children": [
-          {
-            "name": "Bags",
-            "value": "Bags",
-            "link": "/men/accessories/bags",
-            "id": 38,
-            "children": []
-          },
-          {
-            "name": "Socks",
-            "value": "Socks",
-            "link": "/men/accessories/socks",
-            "id": 39,
-            "children": []
-          },
-          {
-            "name": "Hats",
-            "value": "Hats",
-            "link": "/men/accessories/hats",
-            "id": 40,
             "children": []
           }
         ]
@@ -294,35 +236,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Accessories",
-        "value": "Accessories",
-        "link": "/kids/accessories",
-        "id": 13,
-        "children": [
-          {
-            "name": "Bags",
-            "value": "Bags",
-            "link": "/kids/accessories/bags",
-            "id": 50,
-            "children": []
-          },
-          {
-            "name": "Socks",
-            "value": "Socks",
-            "link": "/kids/accessories/socks",
-            "id": 51,
-            "children": []
-          },
-          {
-            "name": "Hats",
-            "value": "Hats",
-            "link": "/kids/accessories/hats",
-            "id": 52,
-            "children": []
-          }
-        ]
       }
     ]
   },
@@ -407,35 +320,6 @@
             "value": "Hoodies",
             "link": "/sale/clothing/hoodies",
             "id": 61,
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Accessories",
-        "value": "Accessories",
-        "link": "/sale/accessories",
-        "id": 16,
-        "children": [
-          {
-            "name": "Bags",
-            "value": "Bags",
-            "link": "/sale/accessories/bags",
-            "id": 62,
-            "children": []
-          },
-          {
-            "name": "Socks",
-            "value": "Socks",
-            "link": "/sale/accessories/socks",
-            "id": 63,
-            "children": []
-          },
-          {
-            "name": "Hats",
-            "value": "Hats",
-            "link": "/sale/accessories/hats",
-            "id": 64,
             "children": []
           }
         ]

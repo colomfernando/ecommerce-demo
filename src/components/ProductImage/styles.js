@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import colors from 'theme/colors';
 
 const mapSize = {
   small: '80px',
@@ -8,9 +7,7 @@ const mapSize = {
 };
 
 const Wrapper = styled.div`
-  background-color: ${colors.grey[300]};
   max-width: ${({ size }) => mapSize[size]};
-  border-radius: 8px;
 `;
 
 const Image = styled.img`

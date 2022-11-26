@@ -6,12 +6,13 @@ import formatPrice from 'utils/formatPrice';
 const Prices = ({ bestPrice, listPrice, ...props }) => {
   if (!listPrice) return null;
 
+  const hasBestPrice = !!bestPrice && bestPrice < listPrice;
   return (
     <Styles.Wrapper {...props}>
-      {bestPrice && (
+      {hasBestPrice && (
         <Styles.BestPrice>{formatPrice.format(bestPrice)}</Styles.BestPrice>
       )}
-      <Styles.ListPrice hasBestPrice={!!bestPrice}>
+      <Styles.ListPrice hasBestPrice={hasBestPrice}>
         {formatPrice.format(listPrice)}
       </Styles.ListPrice>
     </Styles.Wrapper>

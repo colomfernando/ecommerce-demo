@@ -9,8 +9,7 @@
     "listPrice": 50.0,
     "bestPrice": 45.0,
     "images": [{ "url": "id_2-1.png", "alt": "nike air jordan" }],
-    "skuId": "2",
-    "qty": 1
+    "skuId": "2"
   },
   {
     "id": "23",
@@ -20,21 +19,170 @@
     "brand": "nike",
     "brandId": "1233",
     "listPrice": 50.0,
-    "images": [{ "url": "id_23-1.png", "alt": "nike air jordan" }],
-    "skuId": "233",
-    "qty": 2
+    "images": [{ "url": "id_23-1.png", "alt": "nike air jordan retro" }],
+    "skuId": "233"
   },
   {
-    "id": "23",
+    "id": "433",
     "name": "Sply 350",
     "description": "snickers adidas sply-350",
-    "categories": ["1", "3", "5"],
+    "categories": [1, 5, 18],
     "brand": "adidas",
     "brandId": "1243",
     "listPrice": 50.0,
     "bestPrice": 35.0,
-    "images": [{ "url": "id_2343-1.png", "alt": "nike air jordan" }],
-    "skuId": "2343",
-    "qty": 4
+    "images": [{ "url": "id_433-1.png", "alt": "adidas sply-350" }],
+    "skuId": "2343"
+  },
+  {
+    "id": "213",
+    "name": "Sply 350",
+    "description": "Adidas Razor running",
+    "categories": [2, 8, 30],
+    "brand": "adidas",
+    "brandId": "1243",
+    "listPrice": 100.0,
+    "bestPrice": 90.0,
+    "images": [{ "url": "id_213-1.png", "alt": "razor running" }],
+    "skuId": "6634"
+  },
+  {
+    "id": "2213",
+    "name": "Puma puzzle hd",
+    "description": "Puma puzzle hd",
+    "categories": [2, 8, 30],
+    "brand": "puma",
+    "brandId": "1243",
+    "listPrice": 130.0,
+    "images": [{ "url": "id_2213-1.png", "alt": "puma puzzle hd" }],
+    "skuId": "1532"
+  },
+  {
+    "id": "876",
+    "name": "New York Bull",
+    "description": "hoodie black",
+    "categories": [1, 6, 25],
+    "brand": "new york",
+    "brandId": "1243",
+    "listPrice": 180.0,
+    "images": [{ "url": "id_876-1.png", "alt": "hoodie new york" }],
+    "skuId": "8762"
+  },
+  {
+    "id": "8766",
+    "name": "New York Bull",
+    "description": "hoodie black",
+    "categories": [1, 6, 25],
+    "brand": "new york",
+    "brandId": "1243",
+    "listPrice": 180.0,
+    "images": [{ "url": "id_8766-1.png", "alt": "hoodie new york" }],
+    "skuId": "23876643"
+  },
+  {
+    "id": "8799",
+    "name": "jogging",
+    "description": "white mamba jogging",
+    "categories": [1, 6, 21],
+    "brand": "white bamba",
+    "brandId": "1243",
+    "listPrice": 80.0,
+    "images": [{ "url": "id_8799-1.png", "alt": "white mamba jogging" }],
+    "skuId": "8799"
+  },
+  {
+    "id": "829",
+    "name": "classic pants",
+    "description": "classic pants",
+    "categories": [1, 6, 21],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 79.0,
+    "bestPrice": 79,
+    "images": [{ "url": "id_829-1.png", "alt": "classic" }],
+    "skuId": "829"
+  },
+  {
+    "id": "82923",
+    "name": "classic shirt",
+    "description": "classic shirt",
+    "categories": [1, 6, 22],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 39.0,
+    "images": [{ "url": "id_82923-1.png", "alt": "classic t-shirt" }],
+    "skuId": "822219"
+  },
+  {
+    "id": "83323",
+    "name": "classic shirt grey",
+    "description": "classic shirt grey",
+    "categories": [1, 6, 22],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 37.0,
+    "bestPrice": 66,
+    "images": [{ "url": "id_83323-1.png", "alt": "classic t-shirt" }],
+    "skuId": "975768"
+  },
+  {
+    "id": "33422",
+    "name": "classic pants black",
+    "description": "classic pants black",
+    "categories": [2, 9, 33],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 37.0,
+    "bestPrice": 23,
+    "images": [{ "url": "id_33422-1.png", "alt": "classic pants" }],
+    "skuId": "33422"
+  },
+  {
+    "id": "323456",
+    "name": "classic pants brown",
+    "description": "classic pants brown",
+    "categories": [2, 9, 33],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 37.0,
+    "bestPrice": 23,
+    "images": [{ "url": "id_323456-1.png", "alt": "classic pants" }],
+    "skuId": "323456"
+  },
+  {
+    "id": "3232456",
+    "name": "classic jeans",
+    "description": "classic jeans",
+    "categories": [2, 9, 33],
+    "brand": "classic",
+    "brandId": "1243",
+    "listPrice": 57.0,
+    "bestPrice": 53,
+    "images": [{ "url": "id_3232456-1.png", "alt": "classic jeans" }],
+    "skuId": "33422234"
+  },
+  {
+    "id": "32756",
+    "name": "t-shirt red",
+    "description": "t-shirt red tommy",
+    "categories": [2, 9, 33],
+    "brand": "tommy",
+    "brandId": "1243",
+    "listPrice": 57.0,
+    "bestPrice": 53,
+    "images": [{ "url": "id_32756-1.png", "alt": "t-shirt tommy" }],
+    "skuId": "32756"
+  },
+  {
+    "id": "997756",
+    "name": "t-shirt blue",
+    "description": "t-shirt blue tommy",
+    "categories": [2, 9, 33],
+    "brand": "tommy",
+    "brandId": "1243",
+    "listPrice": 57.0,
+    "bestPrice": 53,
+    "images": [{ "url": "id_997756-1.png", "alt": "t-shirt tommy" }],
+    "skuId": "997756"
   }
 ]
