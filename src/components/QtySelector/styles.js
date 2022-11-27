@@ -45,7 +45,6 @@ const MinusButton = styled(BaseButton)``;
 
 const Qty = styled.span`
   display: flex;
-
   justify-content: center;
   align-items: center;
   ${({ type }) => typeMap[type].input};

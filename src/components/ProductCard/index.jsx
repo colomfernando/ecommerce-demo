@@ -3,6 +3,11 @@ import React from 'react';
 import Styles from './styles';
 import useCart from 'hooks/useCart';
 
+// TODO: lógica rating
+// "rating": {
+// 	"rate": 3.9,
+// 	"count": 120
+// }
 const ProductCard = ({
   name,
   bestPrice,
@@ -35,7 +40,7 @@ const ProductCard = ({
       </Styles.Link>
       <Styles.WrapperInfo>
         <Styles.Brand>{brand}</Styles.Brand>
-        <Styles.Name>{name}</Styles.Name>
+        <Styles.Name name={name} />
         <Styles.Price listPrice={listPrice} bestPrice={bestPrice} />
         {isItemInOrder && (
           <Styles.Qty
@@ -48,7 +53,7 @@ const ProductCard = ({
           isItemInOrder={isItemInOrder}
           onClick={() => addItem(item)}
         >
-          Buy
+          Add
         </Styles.BuyButton>
       </Styles.WrapperInfo>
     </Styles.Wrapper>

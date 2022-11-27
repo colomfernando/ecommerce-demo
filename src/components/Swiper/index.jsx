@@ -22,7 +22,7 @@ const Swiper = ({
   centeredSlides = false,
   spaceBetween = 0,
   navigation = false,
-  pagination = false,
+  pagination = {},
   loop = false,
   type,
   onSwiper,
@@ -74,7 +74,7 @@ Swiper.defaultProps = {
   navigation: false,
   loop: false,
   type: null,
-  pagination: null,
+  pagination: {},
   centeredSlides: false,
   onSwiper: null,
 };

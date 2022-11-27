@@ -26,6 +26,7 @@ const QtySelector = ({ qty, type, plusFn, minusFn, ...props }) => {
   return (
     <Styles.Wrapper {...props} type={type}>
       <Styles.MinusButton
+        className="action-button minus"
         disabled={qtyToShow <= 1}
         onClick={onClickHandlesMinus}
         type={type}
@@ -35,7 +36,11 @@ const QtySelector = ({ qty, type, plusFn, minusFn, ...props }) => {
       <Styles.Qty disabled type={type}>
         {qtyToShow}
       </Styles.Qty>
-      <Styles.PlusButton onClick={onClickHandlesPlus} type={type}>
+      <Styles.PlusButton
+        className="action-button plus"
+        onClick={onClickHandlesPlus}
+        type={type}
+      >
         +
       </Styles.PlusButton>
     </Styles.Wrapper>

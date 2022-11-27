@@ -31,12 +31,15 @@
     "brandId": "1243",
     "listPrice": 50.0,
     "bestPrice": 35.0,
-    "images": [{ "url": "id_433-1.png", "alt": "adidas sply-350" }],
+    "images": [
+      { "url": "id_433-1.png", "alt": "adidas sply-350" },
+      { "url": "id_23-1.png", "alt": "nike air jordan retro" }
+    ],
     "skuId": "2343"
   },
   {
     "id": "213",
-    "name": "Sply 350",
+    "name": "Razor running",
     "description": "Adidas Razor running",
     "categories": [2, 8, 30],
     "brand": "adidas",

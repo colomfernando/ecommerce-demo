@@ -4,6 +4,7 @@ import Prices from 'components/Prices';
 import Button from 'components/Button';
 import ProductImage from 'components/ProductImage';
 import ProductBrand from 'components/ProductBrand';
+import ProductName from 'components/ProductName';
 import QtySelector from 'components/QtySelector';
 import breakpoints from 'theme/breakpoints';
 import LinkRoute from 'components/LinkRoute';
@@ -44,7 +45,7 @@ const Image = styled(ProductImage)`
   border-bottom-left-radius: 0px;
 `;
 
-const Name = styled.h4`
+const Name = styled(ProductName)`
   margin-bottom: 10px;
 `;
 

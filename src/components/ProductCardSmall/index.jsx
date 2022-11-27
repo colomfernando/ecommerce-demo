@@ -16,7 +16,7 @@ const ProductCardSmall = ({
   if (!name || !skuId) return null;
   const { qty, updateItem } = useCart(skuId);
 
-  const imageToShow = images[0] || null;
+  const imageToShow = images && images.length ? images[0] : { url: '' };
 
   return (
     <Styles.Wrapper {...props}>

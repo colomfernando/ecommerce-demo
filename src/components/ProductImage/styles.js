@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const mapSize = {
   small: '80px',
   medium: '260px',
-  large: '400px',
+  large: '350px',
 };
 
 const Wrapper = styled.div`
