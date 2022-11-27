@@ -9,7 +9,10 @@ import getCategories from 'services/categories/getCategories';
 import { useQuery } from 'react-query';
 import Navigation from 'components/Navigation';
 import useWindowSize from 'hooks/useWindowSize';
+import LinkRoute from 'components/LinkRoute';
 import InputSearchMobile from 'components/InputSearchMobile';
+
+// TODO: mi cuenta
 
 const Header = () => {
   const { items } = useSelector((state) => state.order);
@@ -27,10 +30,12 @@ const Header = () => {
   return (
     <Styles.Header>
       <Styles.InnerHeader>
-        <Styles.LogoWrapper>
-          <Icon name="logoCompany" size={40} />
-          <Styles.Name>Company</Styles.Name>
-        </Styles.LogoWrapper>
+        <LinkRoute to="/">
+          <Styles.LogoWrapper>
+            <Icon name="logoCompany" size={40} />
+            <Styles.Name>Company</Styles.Name>
+          </Styles.LogoWrapper>
+        </LinkRoute>
         {responsive.md && <InputSearch />}
         {responsive.onlySm && (
           <Styles.ButtonActionMobileSearch

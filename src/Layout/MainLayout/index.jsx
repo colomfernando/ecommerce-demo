@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
   return (
     <Styles.Wrapper>
       <Header />
-      {children}
+      <Styles.Inner>{children}</Styles.Inner>
     </Styles.Wrapper>
   );
 };

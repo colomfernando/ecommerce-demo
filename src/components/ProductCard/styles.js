@@ -6,6 +6,7 @@ import ProductImage from 'components/ProductImage';
 import ProductBrand from 'components/ProductBrand';
 import QtySelector from 'components/QtySelector';
 import breakpoints from 'theme/breakpoints';
+import LinkRoute from 'components/LinkRoute';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -13,7 +14,6 @@ const Wrapper = styled.div`
   border-radius: 8px;
   display: flex;
   flex-flow: column nowrap;
-  cursor: pointer;
   box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.9);
 
   ${breakpoints.md} {
@@ -28,6 +28,8 @@ const Wrapper = styled.div`
     }
   }
 `;
+
+const Link = styled(LinkRoute)``;
 
 const WrapperInfo = styled.div`
   display: flex;
@@ -75,6 +77,7 @@ export default {
   Wrapper,
   Image,
   Brand,
+  Link,
   WrapperInfo,
   Name,
   Price,

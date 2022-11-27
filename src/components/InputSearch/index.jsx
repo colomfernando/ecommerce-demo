@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
 import Styles from './styles';
+
+// TODO: lógica buscador
 
 const InputSearch = () => {
   const [searchVal, setSearchVal] = useState('');

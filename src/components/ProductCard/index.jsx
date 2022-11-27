@@ -27,10 +27,12 @@ const ProductCard = ({
 
   return (
     <Styles.Wrapper {...props}>
-      <Styles.Image
-        src={`${process.env.PUBLIC_URL}/assets/products/${imageToShow.url}`}
-        alt={imageToShow.alt}
-      />
+      <Styles.Link to={`product/${skuId}`}>
+        <Styles.Image
+          src={`${process.env.PUBLIC_URL}/assets/products/${imageToShow.url}`}
+          alt={imageToShow.alt}
+        />
+      </Styles.Link>
       <Styles.WrapperInfo>
         <Styles.Brand>{brand}</Styles.Brand>
         <Styles.Name>{name}</Styles.Name>

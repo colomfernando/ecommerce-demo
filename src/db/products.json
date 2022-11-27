@@ -175,6 +175,18 @@
   },
   {
     "id": "997756",
+    "name": "short white",
+    "description": "short white",
+    "categories": [1, 6, 23],
+    "brand": "tommy",
+    "brandId": "1243",
+    "listPrice": 43.0,
+    "bestPrice": 40,
+    "images": [{ "url": "id_997756-1.png", "alt": "short white" }],
+    "skuId": "997756"
+  },
+  {
+    "id": "254343",
     "name": "t-shirt blue",
     "description": "t-shirt blue tommy",
     "categories": [2, 9, 33],
@@ -182,7 +194,7 @@
     "brandId": "1243",
     "listPrice": 57.0,
     "bestPrice": 53,
-    "images": [{ "url": "id_997756-1.png", "alt": "t-shirt tommy" }],
-    "skuId": "997756"
+    "images": [{ "url": "id_254343-1.png", "alt": "t-shirt tommy" }],
+    "skuId": "254343"
   }
 ]

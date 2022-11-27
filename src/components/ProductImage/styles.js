@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
+  border-radius: inherit;
   width: 100%;
   height: auto;
   ${({ square }) => square && 'aspect-ratio: 1/1;'}
