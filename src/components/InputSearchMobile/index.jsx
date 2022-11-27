@@ -1,22 +1,29 @@
+import { bool } from 'prop-types';
 import React, { useState } from 'react';
 
 import Styles from './styles';
 
-const InputSearch = () => {
+const InputSearchMobile = ({ isOpen }) => {
   const [searchVal, setSearchVal] = useState('');
 
   const handleOnChange = (event) => setSearchVal(event.target.value);
-
   return (
-    <Styles.Wrapper>
+    <Styles.Wrapper isOpen={isOpen}>
       <Styles.Input
         onChange={handleOnChange}
         placeholder="Search product"
         value={searchVal}
       />
-      <Styles.IconSearch name="search" size={20} />
     </Styles.Wrapper>
   );
 };
 
-export default InputSearch;
+InputSearchMobile.propTypes = {
+  isOpen: bool,
+};
+
+InputSearchMobile.defaultProps = {
+  isOpen: false,
+};
+
+export default InputSearchMobile;

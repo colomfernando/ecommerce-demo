@@ -1,9 +1,8 @@
-import instanceDb from 'services';
+import mockProducts from '../../../db/products.json';
 
 const getProducts = async () => {
   try {
-    const request = await instanceDb.get('/products');
-    const { data } = request;
+    const data = await mockProducts;
     return data || [];
   } catch (reason) {
     return reason;

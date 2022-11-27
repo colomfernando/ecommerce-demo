@@ -5,6 +5,7 @@ import breakpoints from 'theme/breakpoints';
 
 const Header = styled.header`
   width: 100%;
+  position: relative;
   top: 0;
   position: sticky;
   display: flex;
@@ -14,7 +15,10 @@ const Header = styled.header`
 `;
 
 const InnerHeader = styled.div`
-  padding: 15px 20px;
+  padding: 5px 10px;
+  ${breakpoints.md} {
+    padding: 15px 20px;
+  }
   background-color: ${colors.white};
   width: 100%;
   display: flex;
@@ -27,30 +31,27 @@ const LogoWrapper = styled.div`
 `;
 
 const Name = styled.p`
-  display: none;
-  ${breakpoints.md} {
-    margin-left: 10px;
-    display: flex;
-  }
+  margin-left: 10px;
+  display: flex;
 `;
 
 const Actions = styled.div``;
 
 const ButtonActionBase = styled(Button)`
   :not(:last-child) {
-    margin-right: 20px;
+    margin-right: 15px;
   }
+`;
+
+const ButtonActionMobileSearch = styled(ButtonActionBase)`
+  margin-left: auto;
 `;
 
 const ButtonActionCart = styled(ButtonActionBase)`
   position: relative;
 `;
 
-const ButtonAction = styled(ButtonActionBase)`
-  :not(:last-child) {
-    margin-right: 20px;
-  }
-`;
+const ButtonAction = styled(ButtonActionBase)``;
 
 const ItemsQty = styled.span`
   display: flex;
@@ -76,6 +77,7 @@ export default {
   InnerHeader,
   ButtonAction,
   ButtonActionCart,
+  ButtonActionMobileSearch,
   LogoWrapper,
   ItemsQty,
   Name,

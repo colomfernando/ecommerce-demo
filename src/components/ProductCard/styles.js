@@ -5,6 +5,7 @@ import Button from 'components/Button';
 import ProductImage from 'components/ProductImage';
 import ProductBrand from 'components/ProductBrand';
 import QtySelector from 'components/QtySelector';
+import breakpoints from 'theme/breakpoints';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -13,13 +14,18 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
-    background 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
-    box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  &:hover {
-    transform: scale3d(1.03, 1.03, 1);
-    z-index: 1;
-    box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.9);
+
+  ${breakpoints.md} {
+    box-shadow: initial;
+    transition: transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+      background 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
+      box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:hover {
+      transform: scale3d(1.03, 1.03, 1);
+      z-index: 1;
+      box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.9);
+    }
   }
 `;
 
