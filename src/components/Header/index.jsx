@@ -9,6 +9,7 @@ import getCategories from 'services/categories/getCategories';
 import { useQuery } from 'react-query';
 import Navigation from 'components/Navigation';
 import useWindowSize from 'hooks/useWindowSize';
+import getTotalItems from 'utils/getTotalItems';
 import LinkRoute from 'components/LinkRoute';
 import InputSearchMobile from 'components/InputSearchMobile';
 
@@ -27,6 +28,7 @@ const Header = () => {
 
   const handleMinicartOnClick = () => dispatch(openMinicartAction());
 
+  const totalItems = getTotalItems(items);
   return (
     <Styles.Header>
       <Styles.InnerHeader>
@@ -47,9 +49,7 @@ const Header = () => {
         )}
         <Styles.Actions>
           <Styles.ButtonActionCart baseButton onClick={handleMinicartOnClick}>
-            {!!items.length && (
-              <Styles.ItemsQty>{items.length}</Styles.ItemsQty>
-            )}
+            {!!items.length && <Styles.ItemsQty>{totalItems}</Styles.ItemsQty>}
             <Icon name="cart" size={28} />
           </Styles.ButtonActionCart>
           <Styles.ButtonAction baseButton>

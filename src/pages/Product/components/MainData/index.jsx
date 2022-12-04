@@ -11,6 +11,11 @@ const MainData = () => {
   const swiperProps = {
     ...(images.length > 1 && { loop: true, navigation: true }),
   };
+
+  const item = {
+    ...productData,
+    images,
+  };
   return (
     <Styles.Wrapper>
       <Styles.WrapperSlider>
@@ -24,7 +29,7 @@ const MainData = () => {
           ))}
         </Swiper>
       </Styles.WrapperSlider>
-      <ProductInfo {...productData} />
+      <ProductInfo {...item} />
     </Styles.Wrapper>
   );
 };

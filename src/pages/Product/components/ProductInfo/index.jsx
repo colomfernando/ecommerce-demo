@@ -14,6 +14,7 @@ const ProductInfo = ({
 }) => {
   if (!skuId) return null;
   const { qty, isItemInOrder, addItem, updateItem } = useCart(skuId);
+  console.log('props :>> ', props);
   const item = {
     skuId,
     brand,
