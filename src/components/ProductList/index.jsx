@@ -3,16 +3,22 @@ import React from 'react';
 import Styles from './styles';
 
 const ProductList = ({ products, ...props }) => {
-  if (!products || !products.length) return null;
+  const hasProducts = Boolean(products && products.length);
 
   return (
     <Styles.Wrapper {...props}>
-      <Styles.Filters>Filtros</Styles.Filters>
-      <Styles.List>
-        {products.map((product) => (
-          <Styles.Product key={product.id} {...product} />
-        ))}
-      </Styles.List>
+      {hasProducts ? (
+        <>
+          <Styles.Filters>Filtros</Styles.Filters>
+          <Styles.List>
+            {products.map((product) => (
+              <Styles.Product key={product.id} {...product} />
+            ))}
+          </Styles.List>
+        </>
+      ) : (
+        <Styles.EmptyResult text="No products available" />
+      )}
     </Styles.Wrapper>
   );
 };

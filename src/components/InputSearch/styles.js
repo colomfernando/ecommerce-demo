@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Icon from 'components/Icon';
 import breakpoints from 'theme/breakpoints';
+import Button from 'components/Button';
 import colors from 'theme/colors';
 
 const Wrapper = styled.div`
@@ -25,13 +26,13 @@ const Input = styled.input`
   outline: none;
 `;
 
-const IconSearch = styled(Icon)`
+const ActionSearch = styled(Button)`
   margin-left: auto;
   margin-right: 10px;
 `;
-`
-`;
+
+const IconSearch = styled(Icon)``;
 
 Wrapper.displayName = 'inputSearch';
 
-export default { Wrapper, Input, IconSearch };
+export default { Wrapper, Input, IconSearch, ActionSearch };

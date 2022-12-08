@@ -45,7 +45,7 @@ const MiniCart = () => {
             ))}
           </Styles.ProductList>
         ) : (
-          <Styles.EmptyCart />
+          <Styles.EmptyCart text="Your cart is empty" />
         )}
         {!!hasItems && (
           <Styles.Resume>

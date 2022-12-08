@@ -32,7 +32,7 @@ const ProductCard = ({
 
   return (
     <Styles.Wrapper {...props}>
-      <Styles.Link to={`product/${skuId}`}>
+      <Styles.Link to={`/product/${skuId}`}>
         <Styles.Image
           src={`${process.env.PUBLIC_URL}/assets/products/${imageToShow.url}`}
           alt={imageToShow.alt}

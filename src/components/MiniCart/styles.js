@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import colors from 'theme/colors';
-import EmptyCartMessage from 'components/EmptyCartMessage';
+import EmptyMessage from 'components/EmptyMessage';
 import TotalCart from 'components/TotalCart';
 
 const Wrapper = styled.div`
@@ -53,11 +53,8 @@ const Resume = styled.div`
   box-shadow: rgb(0 0 0 / 25%) 2px 2px 10px 0px;
 `;
 
-const EmptyCart = styled(EmptyCartMessage)`
+const EmptyCart = styled(EmptyMessage)`
   height: 100vh;
-  & > p {
-    margin-top: 40px;
-  }
 `;
 
 const Total = styled(TotalCart)`

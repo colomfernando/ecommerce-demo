@@ -12,7 +12,7 @@ const EmptyIcon = styled(Icon)``;
 
 const Text = styled.p`
   font-size: 1.2rem;
-  font-weight: 700;
+  margin-top: 20px;
 `;
 
 Wrapper.displayName = 'EmptyCartMessage';

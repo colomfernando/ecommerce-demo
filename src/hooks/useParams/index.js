@@ -1,22 +1,19 @@
-import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-const paramsMap = ['ft', 'brand'];
+const paramsMap = ['ft', 'b', 'c'];
 
 const useParams = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [params, setParams] = useState({});
 
-  useEffect(() => {
-    const paramsFromUrl = paramsMap.reduce((acc, act) => {
-      if (!act) return acc;
-      return { ...acc, [act]: searchParams.get(act) };
-    }, {});
+  const paramsFromUrl = paramsMap.reduce((acc, act) => {
+    if (!act) return acc;
+    const valueMap = searchParams.get(act);
 
-    setParams(paramsFromUrl);
-  }, []);
+    if (!valueMap) return acc;
+    return { ...acc, [act]: searchParams.get(act) };
+  }, {});
 
-  return { get: () => params, set: setSearchParams };
+  return { get: () => paramsFromUrl, set: setSearchParams };
 };
 
 export default useParams;
