@@ -11,8 +11,9 @@ const Search = () => {
   const query = params.get();
 
   const getProducts = async () => {
-    const data = await searchProducts({ filters: query });
-    setProducts({ data, isLoading: false });
+    const searchData = await searchProducts({ filters: query });
+
+    setProducts({ data: searchData.products, isLoading: false });
   };
 
   useEffect(() => {

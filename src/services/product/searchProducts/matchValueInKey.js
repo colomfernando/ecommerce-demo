@@ -9,7 +9,7 @@
 const matchValueInKey = (product, keysToSearch, value) => {
   if (!product || !Object.keys(product).length) return false;
   if (!keysToSearch || !keysToSearch.length) return false;
-  if (!value) return false;
+  if (!value) return true;
 
   return keysToSearch.some(
     (key) => !!product[key] && product[key].toLowerCase().includes(value)
