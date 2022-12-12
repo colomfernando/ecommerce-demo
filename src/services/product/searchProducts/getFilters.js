@@ -12,7 +12,7 @@ const deleteDuplicates = (array, key) => {
 const getFilters = (products) => {
   if (!products || !products.length) return {};
   const brands = products.map((product) => ({
-    brand: product.brand,
+    name: product.brand,
     id: product.brandId,
   }));
 

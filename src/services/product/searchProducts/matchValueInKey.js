@@ -6,13 +6,15 @@
  * @returns A function that takes in a product, keysToSearch, and a value. It returns true if the
  * product has a key that matches the value.
  */
-const matchValueInKey = (product, keysToSearch, value) => {
+const matchValueInKey = (product, keysToSearch, values) => {
   if (!product || !Object.keys(product).length) return false;
   if (!keysToSearch || !keysToSearch.length) return false;
-  if (!value) return true;
+  if (!values || !values.length) return true;
 
   return keysToSearch.some(
-    (key) => !!product[key] && product[key].toLowerCase().includes(value)
+    (key) =>
+      !!product[key] &&
+      values.some((ft) => product[key].toLowerCase().includes(ft))
   );
 };
 

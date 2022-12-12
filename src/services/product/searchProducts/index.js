@@ -10,12 +10,12 @@ const searchProducts = async ({ filters }) => {
       return { products: data, filters: getFilters(data) };
 
     const { ft, b } = filters;
-    const filtered = data.filter((prod) => {
-      return (
-        matchValueInKey(prod, ['name', 'description', 'brand'], ft) &&
-        matchByBrand(prod, b)
-      );
-    });
+
+    const filtered = data
+      .filter((prod) =>
+        matchValueInKey(prod, ['name', 'description', 'brand'], ft)
+      )
+      .filter((prod) => matchByBrand(prod, b));
 
     return { products: filtered, filters: getFilters(filtered) };
   } catch (reason) {

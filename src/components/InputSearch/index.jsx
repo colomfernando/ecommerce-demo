@@ -16,10 +16,9 @@ const InputSearch = () => {
   };
 
   const handleSearch = () => {
-    if (!searchVal) return null;
     navigate({
       pathname: '/search',
-      search: `?ft=${searchVal}`,
+      ...(searchVal && { search: `?ft=${searchVal}` }),
     });
   };
 

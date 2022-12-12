@@ -1,15 +1,18 @@
 import { arrayOf, shape, string, number } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
+import Filters from 'components/Filters';
 
-const ProductList = ({ products, ...props }) => {
+const ProductList = ({ filters, products, ...props }) => {
   const hasProducts = Boolean(products && products.length);
 
   return (
     <Styles.Wrapper {...props}>
       {hasProducts ? (
         <>
-          <Styles.Filters>Filtros</Styles.Filters>
+          <Styles.Aside>
+            <Filters filters={filters} />
+          </Styles.Aside>
           <Styles.List>
             {products.map((product) => (
               <Styles.Product key={product.id} {...product} />
@@ -24,6 +27,7 @@ const ProductList = ({ products, ...props }) => {
 };
 
 ProductList.propTypes = {
+  filters: shape({}),
   products: arrayOf(
     shape({
       brand: string,
@@ -43,6 +47,7 @@ ProductList.propTypes = {
 
 ProductList.defaultProps = {
   products: [],
+  filters: {},
 };
 
 export default ProductList;

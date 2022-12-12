@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
 `;
-const Filters = styled.aside`
+const Aside = styled.aside`
   flex-basis: 20%;
 `;
 
@@ -26,4 +26,4 @@ const Product = styled(ProductCard)``;
 
 Wrapper.displayName = 'ProductList';
 
-export default { Wrapper, Filters, List, Product, EmptyResult };
+export default { Wrapper, Aside, List, Product, EmptyResult };
