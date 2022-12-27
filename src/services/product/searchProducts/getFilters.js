@@ -1,3 +1,5 @@
+import getCategories from 'services/categories/getCategories';
+
 const deleteDuplicates = (array, key) => {
   return array.reduce((acc, act) => {
     const original = acc.find(
@@ -9,14 +11,26 @@ const deleteDuplicates = (array, key) => {
   }, []);
 };
 
-const getFilters = (products) => {
+const getFilters = async (products) => {
   if (!products || !products.length) return {};
-  const brands = products.map((product) => ({
-    name: product.brand,
-    id: product.brandId,
-  }));
+  let categories = [];
+  const brands = products.map((product) => {
+    categories.push(...product.categories);
+    return { name: product.brand, id: product.brandId };
+  });
 
-  return { brands: deleteDuplicates(brands, 'id') };
+  const categoriesData = await getCategories();
+
+  const uniquesCategories = [...new Set(categories)];
+
+  const categoriesWithData = uniquesCategories.map((catId) =>
+    categoriesData.find((cat) => cat.id === catId)
+  );
+
+  return {
+    brands: deleteDuplicates(brands, 'id'),
+    categories: categoriesWithData,
+  };
 };
 
 export default getFilters;

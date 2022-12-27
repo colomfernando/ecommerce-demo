@@ -6,21 +6,16 @@ import App from './App';
 import { store } from 'store';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import { QueryClient, QueryClientProvider } from 'react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-const queryClient = new QueryClient();
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <GlobalStyles />
-          <App />
-        </BrowserRouter>
-      </QueryClientProvider>
+      <BrowserRouter>
+        <GlobalStyles />
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

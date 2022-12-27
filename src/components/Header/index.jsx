@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Styles from './styles';
 import Icon from 'components/Icon';
 import InputSearch from 'components/InputSearch';
@@ -6,7 +6,6 @@ import MiniCart from 'components/MiniCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { openMinicartAction } from 'store/minicart';
 import getCategories from 'services/categories/getCategories';
-import { useQuery } from 'react-query';
 import Navigation from 'components/Navigation';
 import useWindowSize from 'hooks/useWindowSize';
 import getTotalItems from 'utils/getTotalItems';
@@ -18,16 +17,21 @@ import InputSearchMobile from 'components/InputSearchMobile';
 const Header = () => {
   const { items } = useSelector((state) => state.order);
   const responsive = useWindowSize();
+  const [categories, setCategories] = useState([]);
   const [isSearchMobileOpen, setIsSearchMobileOpen] = useState(false);
 
   const dispatch = useDispatch();
-  const { data } = useQuery({
-    queryKey: 'categories',
-    queryFn: getCategories,
-  });
 
   const handleMinicartOnClick = () => dispatch(openMinicartAction());
 
+  const getAndSetCategories = async () => {
+    const cats = await getCategories();
+    setCategories(cats);
+  };
+
+  useEffect(() => {
+    getAndSetCategories();
+  }, []);
   const totalItems = getTotalItems(items);
   return (
     <Styles.Header>
@@ -58,7 +62,7 @@ const Header = () => {
         </Styles.Actions>
         <MiniCart />
       </Styles.InnerHeader>
-      {responsive.lg && <Navigation categories={data} />}
+      {responsive.lg && <Navigation categories={categories} />}
       {responsive.onlySm && <InputSearchMobile isOpen={isSearchMobileOpen} />}
     </Styles.Header>
   );

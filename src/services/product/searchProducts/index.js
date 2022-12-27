@@ -6,8 +6,9 @@ import matchByBrand from './matchByBrand';
 const searchProducts = async ({ filters }) => {
   try {
     const data = await mockProducts;
+    const filtersFromData = await getFilters(data);
     if (!filters || !Object.keys(filters).length)
-      return { products: data, filters: getFilters(data) };
+      return { products: data, filters: filtersFromData };
 
     const { ft, b } = filters;
 
@@ -17,7 +18,8 @@ const searchProducts = async ({ filters }) => {
       )
       .filter((prod) => matchByBrand(prod, b));
 
-    return { products: filtered, filters: getFilters(filtered) };
+    const filtersFromFilteredData = await getFilters(data);
+    return { products: filtered, filters: filtersFromFilteredData };
   } catch (reason) {
     return reason;
   }

@@ -6,13 +6,11 @@ const getCategories = async () => {
     const categoriesCache = localStorage.getItem('categories');
     if (categoriesCache && categoriesCache.length)
       return JSON.parse(categoriesCache);
-
     const formatData = formatCategories(mock);
     localStorage.setItem('categories', JSON.stringify(formatData));
-
     return formatData || [];
   } catch (reason) {
-    return reason;
+    return reason.message;
   }
 };
 

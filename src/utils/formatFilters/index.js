@@ -3,6 +3,11 @@ const mapperFilters = {
     brands.map((brand) => ({ value: `b=${brand.id}`, name: brand.name })),
 };
 
+const mapperComponent = {
+  brands: 'Checkbox',
+  categories: 'Radio',
+};
+
 const formatFilters = (filters) => {
   if (!filters || !Object.keys(filters).length) return [];
 
@@ -14,7 +19,14 @@ const formatFilters = (filters) => {
     const mapperFormat = mapperFilters[act];
     if (!mapperFormat) return acc;
 
-    return [...acc, { title: act, options: mapperFormat(filters[act]) }];
+    return [
+      ...acc,
+      {
+        title: act,
+        component: mapperComponent[act],
+        options: mapperFormat(filters[act]),
+      },
+    ];
   }, []);
 
   return formattedFilters;

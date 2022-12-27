@@ -35,6 +35,23 @@ const setParent = (item) => {
 };
 
 /**
+ * It takes a nested array of objects and returns a flat array of objects
+ * @param data - The data to be formatted.
+ * @returns null.
+ */
+const flatCategory = (data) => {
+  if (!data.children || !data.children.length) {
+    formatData.push(data);
+    return null;
+  }
+
+  formatData.push(data);
+  for (const item of data.children) {
+    flatCategory(item);
+  }
+};
+
+/**
  * It takes an array of objects, and returns an array of objects with a new property called 'type' and
  * 'parent'
  * @param data - the data that we want to format
@@ -49,10 +66,12 @@ const formatCategories = (data) => {
   if (!data) return [];
 
   for (const item of data) {
-    if (!item.children || !item.children.length) return formatData.push(item);
-    formatData.push(item);
-    formatCategories(item.children);
+    const itemExist = formatData.find((cat) => cat.id === item.id);
+    if (itemExist) return null;
+
+    flatCategory(item);
   }
+
   const dataWithType = formatData.map((item) => ({
     ...item,
     type: getType(item.link),
@@ -61,6 +80,7 @@ const formatCategories = (data) => {
     ...item,
     parent: setParent(item),
   }));
+
   return dataWithParent;
 };
 

@@ -1,31 +1,44 @@
-import Checkbox from 'components/Checkbox';
 import { shape } from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
 import formatFilters from 'utils/formatFilters';
+import Checkbox from 'components/Checkbox';
 import Styles from './styles';
+
+const mapperFormat = {
+  Checkbox: ({ name, value }) => ({
+    label: name,
+    onChange: () => console.log(value),
+  }),
+};
+
+const MapperComponent = {
+  Checkbox: Checkbox,
+};
 
 const Filters = ({ filters, ...props }) => {
   if (!filters || !Object.keys(filters).length) return null;
 
   const formattedFilters = formatFilters(filters);
-  console.log('formattedFilters :>> ', formattedFilters);
-  useEffect(() => {}, []);
 
+  const renderFilter = (opt) => {
+    const Component = MapperComponent[opt.component];
+    if (!Component) return null;
+
+    return <Component {...mapperFormat[opt.component](opt)} />;
+  };
   return (
     <Styles.Wrapper {...props}>
       {!!formattedFilters.length &&
-        formattedFilters.map(({ title, options }, idx) => (
-          <div key={`${title}-${idx}`}>
-            <p>{title}</p>
+        formattedFilters.map(({ title, component, options }, idx) => (
+          <Styles.Filters key={`${title}-${idx}`}>
+            <Styles.TitleFilter>{title}</Styles.TitleFilter>
             {!!options.length &&
               options.map((opt) => (
-                <Checkbox
-                  key={opt.name}
-                  label={opt.name}
-                  onChange={(arg) => console.log({ arg, opt: opt.value })}
-                />
+                <Styles.Filter key={`${opt.value}`}>
+                  {renderFilter({ ...opt, component })}
+                </Styles.Filter>
               ))}
-          </div>
+          </Styles.Filters>
         ))}
     </Styles.Wrapper>
   );

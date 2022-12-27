@@ -2,9 +2,12 @@ import { arrayOf, shape, string, number } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
 import Filters from 'components/Filters';
+import { useSelector } from 'react-redux';
 
-const ProductList = ({ filters, products, ...props }) => {
-  const hasProducts = Boolean(products && products.length);
+const ProductList = ({ ...props }) => {
+  const searchState = useSelector((state) => state.search);
+  const { results, filters } = searchState;
+  const hasProducts = Boolean(results && results.length);
 
   return (
     <Styles.Wrapper {...props}>
@@ -14,7 +17,7 @@ const ProductList = ({ filters, products, ...props }) => {
             <Filters filters={filters} />
           </Styles.Aside>
           <Styles.List>
-            {products.map((product) => (
+            {results.map((product) => (
               <Styles.Product key={product.id} {...product} />
             ))}
           </Styles.List>
