@@ -15,10 +15,11 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const query = params.get();
+
   const getProducts = async () => {
     dispatch(setIsLoadingAction(true));
     const searchData = await searchProducts({ filters: query });
-    console.log('searchData :>> ', searchData);
+
     dispatch(setResultsAction(searchData.products));
     dispatch(setInitialFiltersAction(searchData.filters));
     dispatch(setIsLoadingAction(false));
@@ -26,7 +27,7 @@ const Search = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [query]);
 
   return (
     <MainLayout>

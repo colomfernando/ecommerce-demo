@@ -18,7 +18,7 @@ const searchProducts = async ({ filters }) => {
       )
       .filter((prod) => matchByBrand(prod, b));
 
-    const filtersFromFilteredData = await getFilters(data);
+    const filtersFromFilteredData = await getFilters(filtered);
     return { products: filtered, filters: filtersFromFilteredData };
   } catch (reason) {
     return reason;
