@@ -1,5 +1,10 @@
 const { createSlice } = require('@reduxjs/toolkit');
-import { setInitialFilters, setResults, setIsLoading } from './actions';
+import {
+  setInitialFilters,
+  setResults,
+  setIsLoading,
+  setResetFilters,
+} from './actions';
 
 const initialState = {
   isLoading: true,
@@ -14,9 +19,14 @@ const searchSlice = createSlice({
     setInitialFiltersAction: setInitialFilters,
     setResultsAction: setResults,
     setIsLoadingAction: setIsLoading,
+    setResetFiltersAction: setResetFilters,
   },
 });
 
-export const { setInitialFiltersAction, setResultsAction, setIsLoadingAction } =
-  searchSlice.actions;
+export const {
+  setInitialFiltersAction,
+  setResultsAction,
+  setIsLoadingAction,
+  setResetFiltersAction,
+} = searchSlice.actions;
 export default searchSlice.reducer;

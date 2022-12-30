@@ -2,14 +2,8 @@ import { shape } from 'prop-types';
 import React from 'react';
 import formatFilters from 'utils/formatFilters';
 import Checkbox from 'components/Checkbox';
+import useParamsUrl from 'hooks/useParamsUrl';
 import Styles from './styles';
-
-const mapperFormat = {
-  Checkbox: ({ name, value }) => ({
-    label: name,
-    onChange: () => console.log(value),
-  }),
-};
 
 const MapperComponent = {
   Checkbox: Checkbox,
@@ -17,7 +11,14 @@ const MapperComponent = {
 
 const Filters = ({ filters, ...props }) => {
   if (!filters || !Object.keys(filters).length) return null;
+  const params = useParamsUrl();
 
+  const mapperFormat = {
+    Checkbox: ({ name, query }) => ({
+      label: name,
+      onChange: () => params.set(query),
+    }),
+  };
   const formattedFilters = formatFilters(filters);
 
   const renderFilter = (opt) => {

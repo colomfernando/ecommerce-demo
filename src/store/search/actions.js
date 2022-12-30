@@ -12,3 +12,9 @@ export const setIsLoading = (state, action) => ({
   ...state,
   isLoading: action.payload,
 });
+
+export const setResetFilters = () => ({
+  isLoading: false,
+  filters: [],
+  results: [],
+});

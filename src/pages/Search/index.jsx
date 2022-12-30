@@ -8,6 +8,7 @@ import {
   setInitialFiltersAction,
   setResultsAction,
   setIsLoadingAction,
+  setResetFiltersAction,
 } from 'store/search';
 
 const Search = () => {
@@ -27,6 +28,9 @@ const Search = () => {
 
   useEffect(() => {
     getProducts();
+    return () => {
+      dispatch(setResetFiltersAction());
+    };
   }, [query]);
 
   return (

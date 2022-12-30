@@ -1,6 +1,10 @@
 const mapperFilters = {
   brands: (brands) =>
-    brands.map((brand) => ({ value: `b=${brand.id}`, name: brand.name })),
+    brands.map((brand) => ({
+      value: brand.id,
+      query: { b: brand.id },
+      name: brand.name,
+    })),
 };
 
 const mapperComponent = {
