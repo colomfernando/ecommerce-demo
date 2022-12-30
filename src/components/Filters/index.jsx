@@ -16,7 +16,10 @@ const Filters = ({ filters, ...props }) => {
   const mapperFormat = {
     Checkbox: ({ name, query }) => ({
       label: name,
-      onChange: () => params.set(query),
+      onChange: (isChecked) => {
+        if (!isChecked) return params.remove(query);
+        return params.set(query);
+      },
     }),
   };
   const formattedFilters = formatFilters(filters);

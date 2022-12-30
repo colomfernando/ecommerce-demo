@@ -5,10 +5,9 @@ import useParamsUrl from 'hooks/useParamsUrl';
 import searchProducts from 'services/product/searchProducts';
 import { useDispatch } from 'react-redux';
 import {
-  setInitialFiltersAction,
+  setFiltersAction,
   setResultsAction,
   setIsLoadingAction,
-  setResetFiltersAction,
 } from 'store/search';
 
 const Search = () => {
@@ -22,15 +21,12 @@ const Search = () => {
     const searchData = await searchProducts({ filters: query });
 
     dispatch(setResultsAction(searchData.products));
-    dispatch(setInitialFiltersAction(searchData.filters));
+    dispatch(setFiltersAction(searchData.filters));
     dispatch(setIsLoadingAction(false));
   };
 
   useEffect(() => {
     getProducts();
-    return () => {
-      dispatch(setResetFiltersAction());
-    };
   }, [query]);
 
   return (

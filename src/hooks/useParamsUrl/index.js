@@ -1,6 +1,6 @@
 import { useSearchParams, createSearchParams } from 'react-router-dom';
 
-const paramsMap = ['ft', 'b', 'c'];
+const paramsMap = ['ft', 'b'];
 
 const addParam = (params, newParam) => {
   if (!params || !Object.keys(params).length) return newParam;
@@ -29,11 +29,15 @@ const useParamsUrl = () => {
 
   const get = () => paramsFromUrl;
 
-  const remove = (param) => searchParams.delete(param);
+  const remove = (param) => {
+    const [key] = Object.keys(param);
+
+    searchParams.delete(key);
+    setSearchParams(searchParams);
+  };
 
   const set = (param) => {
     if (!param) return null;
-
     const prevParams = get();
 
     setSearchParams(createSearchParams(addParam(prevParams, param)));

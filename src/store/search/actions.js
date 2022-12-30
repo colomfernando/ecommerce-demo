@@ -1,4 +1,4 @@
-export const setInitialFilters = (state, action) => ({
+export const setFilters = (state, action) => ({
   ...state,
   filters: action.payload,
 });

@@ -1,6 +1,6 @@
 const { createSlice } = require('@reduxjs/toolkit');
 import {
-  setInitialFilters,
+  setFilters,
   setResults,
   setIsLoading,
   setResetFilters,
@@ -16,7 +16,7 @@ const searchSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
-    setInitialFiltersAction: setInitialFilters,
+    setFiltersAction: setFilters,
     setResultsAction: setResults,
     setIsLoadingAction: setIsLoading,
     setResetFiltersAction: setResetFilters,
@@ -24,7 +24,7 @@ const searchSlice = createSlice({
 });
 
 export const {
-  setInitialFiltersAction,
+  setFiltersAction,
   setResultsAction,
   setIsLoadingAction,
   setResetFiltersAction,
