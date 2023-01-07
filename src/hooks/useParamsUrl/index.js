@@ -31,8 +31,16 @@ const useParamsUrl = () => {
 
   const remove = (param) => {
     const [key] = Object.keys(param);
-
+    const prevParams = get();
     searchParams.delete(key);
+
+    const arrayParamsToSet = prevParams[key].filter(
+      (val) => val !== param[key]
+    );
+
+    for (const filterValue of arrayParamsToSet) {
+      searchParams.append(key, filterValue);
+    }
     setSearchParams(searchParams);
   };
 

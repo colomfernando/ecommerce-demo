@@ -14,15 +14,18 @@ const Filters = ({ filters, ...props }) => {
   const params = useParamsUrl();
 
   const mapperFormat = {
-    Checkbox: ({ name, query }) => ({
+    Checkbox: ({ name, query, ...rest }) => ({
       label: name,
       onChange: (isChecked) => {
         if (!isChecked) return params.remove(query);
         return params.set(query);
       },
+      ...rest,
     }),
   };
-  const formattedFilters = formatFilters(filters);
+
+  const filtersApplied = params.get();
+  const formattedFilters = formatFilters(filters, filtersApplied);
 
   const renderFilter = (opt) => {
     const Component = MapperComponent[opt.component];

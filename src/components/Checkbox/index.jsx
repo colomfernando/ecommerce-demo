@@ -6,10 +6,11 @@ const Checkbox = ({
   label,
   onChange,
   defaultCheck = false,
+  isSelected = false,
   disabled = false,
   ...props
 }) => {
-  const [isChecked, setIsChecked] = useState(defaultCheck);
+  const [isChecked, setIsChecked] = useState(defaultCheck || isSelected);
 
   const handleOnClick = () => {
     const valueChecked = !isChecked;
@@ -33,6 +34,7 @@ const Checkbox = ({
 Checkbox.propTypes = {
   label: string.isRequired,
   defaultCheck: bool,
+  isSelected: bool,
   disabled: bool,
   onChange: func,
 };
@@ -40,6 +42,7 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   defaultCheck: false,
   disabled: false,
+  isSelected: false,
   onChange: () => {},
 };
 

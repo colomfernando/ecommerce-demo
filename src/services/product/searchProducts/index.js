@@ -12,13 +12,16 @@ const searchProducts = async ({ filters }) => {
 
     const { ft, b } = filters;
 
+    const filteredMatchValue = data.filter((prod) =>
+      matchValueInKey(prod, ['name', 'description', 'brand'], ft)
+    );
     const filtered = data
       .filter((prod) =>
         matchValueInKey(prod, ['name', 'description', 'brand'], ft)
       )
       .filter((prod) => matchByBrand(prod, b));
 
-    const filtersFromFilteredData = await getFilters(filtered);
+    const filtersFromFilteredData = await getFilters(filteredMatchValue);
     return { products: filtered, filters: filtersFromFilteredData };
   } catch (reason) {
     return reason;
