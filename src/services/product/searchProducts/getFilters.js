@@ -59,8 +59,8 @@ const getFilters = async (products) => {
   );
 
   return {
-    brands: deleteDuplicates(getBrands(products), 'id'),
     categories: categoriesProductData,
+    brands: deleteDuplicates(getBrands(products), 'id'),
   };
 };
 

@@ -3,10 +3,12 @@ import React from 'react';
 import formatFilters from 'utils/formatFilters';
 import Checkbox from 'components/Checkbox';
 import useParamsUrl from 'hooks/useParamsUrl';
+import LinkRoute from 'components/LinkRoute';
 import Styles from './styles';
 
 const MapperComponent = {
   Checkbox: Checkbox,
+  Link: LinkRoute,
 };
 
 const Filters = ({ filters, ...props }) => {
@@ -22,6 +24,7 @@ const Filters = ({ filters, ...props }) => {
       },
       ...rest,
     }),
+    Link: ({ name, link }) => ({ children: name, to: link }),
   };
 
   const filtersApplied = params.get();
@@ -31,7 +34,10 @@ const Filters = ({ filters, ...props }) => {
     const Component = MapperComponent[opt.component];
     if (!Component) return null;
 
-    return <Component {...mapperFormat[opt.component](opt)} />;
+    const formatter = mapperFormat[opt.component];
+    if (!formatter) return null;
+
+    return <Component {...formatter(opt)} />;
   };
   return (
     <Styles.Wrapper {...props}>
@@ -40,8 +46,8 @@ const Filters = ({ filters, ...props }) => {
           <Styles.Filters key={`${title}-${idx}`}>
             <Styles.TitleFilter>{title}</Styles.TitleFilter>
             {!!options.length &&
-              options.map((opt) => (
-                <Styles.Filter key={`${opt.value}`}>
+              options.map((opt, idx) => (
+                <Styles.Filter key={`${opt.value}-${idx}`}>
                   {renderFilter({ ...opt, component })}
                 </Styles.Filter>
               ))}

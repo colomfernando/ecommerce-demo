@@ -6,6 +6,11 @@ const mapperFilters = {
       name: brand.name,
       ...brand,
     })),
+  categories: (categories) =>
+    categories.map((cat) => ({
+      link: cat.link,
+      name: cat.value,
+    })),
 };
 
 const mapperQuery = {
@@ -15,7 +20,7 @@ const mapperQuery = {
 
 const mapperComponent = {
   brands: 'Checkbox',
-  categories: 'Radio',
+  categories: 'Link',
 };
 
 const formatFilters = (filters, filtersApplied) => {

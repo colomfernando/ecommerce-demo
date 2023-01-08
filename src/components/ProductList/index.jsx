@@ -2,9 +2,10 @@ import { arrayOf, shape, string, number } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
 import Filters from 'components/Filters';
+import BreadCrumb from 'components/BreadCrumb';
 import { useSelector } from 'react-redux';
 
-const ProductList = ({ ...props }) => {
+const ProductList = ({ breadcrumb, ...props }) => {
   const searchState = useSelector((state) => state.search);
   const { results, filters } = searchState;
   const hasProducts = Boolean(results && results.length);
@@ -13,6 +14,7 @@ const ProductList = ({ ...props }) => {
     <Styles.Wrapper {...props}>
       {hasProducts ? (
         <>
+          {breadcrumb && <BreadCrumb categories={breadcrumb} />}
           <Styles.Aside>
             <Filters filters={filters} />
           </Styles.Aside>
@@ -30,27 +32,18 @@ const ProductList = ({ ...props }) => {
 };
 
 ProductList.propTypes = {
-  filters: shape({}),
-  products: arrayOf(
+  breadcrumb: arrayOf(
     shape({
-      brand: string,
-      bestPrice: number,
-      skuId: string.isRequired,
-      listPrice: number.isRequired,
-      name: string.isRequired,
-      images: arrayOf(
-        shape({
-          url: string,
-          alt: string,
-        })
-      ),
+      name: string,
+      value: string,
+      id: number,
+      link: string,
     })
-  ),
+  ).isRequired,
 };
 
 ProductList.defaultProps = {
-  products: [],
-  filters: {},
+  breadcrumb: [],
 };
 
 export default ProductList;

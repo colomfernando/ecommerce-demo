@@ -41,7 +41,7 @@
     "id": "213",
     "name": "Razor running",
     "description": "Adidas Razor running",
-    "categories": [2, 8, 30],
+    "categories": [2, 8, 29],
     "brand": "adidas",
     "brandId": "1243",
     "listPrice": 100.0,
@@ -168,7 +168,7 @@
     "id": "32756",
     "name": "t-shirt red",
     "description": "t-shirt red tommy",
-    "categories": [2, 9, 33],
+    "categories": [2, 9, 34],
     "brand": "tommy",
     "brandId": "1943",
     "listPrice": 57.0,
@@ -199,5 +199,53 @@
     "bestPrice": 53,
     "images": [{ "url": "id_254343-1.png", "alt": "t-shirt tommy" }],
     "skuId": "254343"
+  },
+  {
+    "id": "254888",
+    "name": "air zoom pegasus",
+    "description": "sneakers nike air zoom pegasus",
+    "categories": [1, 5, 17],
+    "brand": "nike",
+    "brandId": "1233",
+    "listPrice": 197.0,
+    "bestPrice": 189,
+    "images": [{ "url": "id_254888-1.png", "alt": "nike air zoom pegasus" }],
+    "skuId": "254888"
+  },
+  {
+    "id": "76880",
+    "name": "Mid Gore-tex",
+    "description": "sneakers merrell Mid Gore-tex",
+    "categories": [1, 5, 19],
+    "brand": "merrell",
+    "brandId": "67888",
+    "listPrice": 97.0,
+    "bestPrice": 88,
+    "images": [{ "url": "id_76880-1.png", "alt": "Mid Gore-tex" }],
+    "skuId": "76880"
+  },
+  {
+    "id": "7698989",
+    "name": "Men Gore-tex",
+    "description": "sneakers merrell men Gore-tex",
+    "categories": [2, 8, 32],
+    "brand": "merrell",
+    "brandId": "67888",
+    "listPrice": 97.0,
+    "bestPrice": 88,
+    "images": [{ "url": "id_7698989-1.png", "alt": "men Gore-tex" }],
+    "skuId": "7698989"
+  },
+  {
+    "id": "923423",
+    "name": "Short nike",
+    "description": "Short nike",
+    "categories": [2, 9, 35],
+    "brand": "nike",
+    "brandId": "1233",
+    "listPrice": 37.0,
+    "bestPrice": 28,
+    "images": [{ "url": "id_923423-1.png", "alt": "short nike" }],
+    "skuId": "923423"
   }
 ]

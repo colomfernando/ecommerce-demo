@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div``;
 
-const Filters = styled.div``;
+const Filters = styled.div`
+  :not(:last-child) {
+    margin-bottom: 25px;
+  }
+`;
 
 const TitleFilter = styled.h4`
   text-transform: uppercase;

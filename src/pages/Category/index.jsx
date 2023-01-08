@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useParamsUrl from 'hooks/useParamsUrl';
 import searchProducts from 'services/product/searchProducts';
 import getCategoriesFromUrl from 'utils/getCategoriesFromUrl';
+import useBreadcrumb from 'hooks/useBreadcrumb';
 import { useDispatch } from 'react-redux';
 import {
   setFiltersAction,
@@ -14,6 +15,7 @@ import {
 
 const Category = () => {
   const paramsFromUrl = useParams();
+  const breadcrumb = useBreadcrumb();
   const navigate = useNavigate();
 
   const params = useParamsUrl();
@@ -44,7 +46,7 @@ const Category = () => {
 
   return (
     <MainLayout>
-      <ProductList />
+      <ProductList breadcrumb={breadcrumb} />
     </MainLayout>
   );
 };
