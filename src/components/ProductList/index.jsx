@@ -3,29 +3,38 @@ import React from 'react';
 import Styles from './styles';
 import Filters from 'components/Filters';
 import BreadCrumb from 'components/BreadCrumb';
+import useWindowSize from 'hooks/useWindowSize';
+// import Icon from 'components/Icon';
 import { useSelector } from 'react-redux';
 
 const ProductList = ({ breadcrumb, ...props }) => {
+  const responsive = useWindowSize();
   const searchState = useSelector((state) => state.search);
   const { results, filters } = searchState;
   const hasProducts = Boolean(results && results.length);
 
   return (
     <Styles.Wrapper {...props}>
-      {hasProducts ? (
+      {/* <Styles.ButtonFilter baseButton onClick={() => null}>
+        <Icon name="cart" size={28} />
+      </Styles.ButtonFilter> */}
+      {!hasProducts && <Styles.EmptyResult text="No products available" />}
+      {hasProducts && (
         <>
           {breadcrumb && <BreadCrumb categories={breadcrumb} />}
-          <Styles.Aside>
-            <Filters filters={filters} />
-          </Styles.Aside>
+
+          {responsive.lg && (
+            <Styles.Aside>
+              <Filters filters={filters} />{' '}
+            </Styles.Aside>
+          )}
+
           <Styles.List>
             {results.map((product) => (
               <Styles.Product key={product.id} {...product} />
             ))}
           </Styles.List>
         </>
-      ) : (
-        <Styles.EmptyResult text="No products available" />
       )}
     </Styles.Wrapper>
   );

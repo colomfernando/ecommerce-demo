@@ -3,7 +3,7 @@ import React from 'react';
 
 const BreadCrumb = ({ categories }) => {
   if (!categories || !categories.length) return null;
-  console.log('categories :>> ', categories);
+
   return <div> </div>;
 };
 
