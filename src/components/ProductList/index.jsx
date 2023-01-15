@@ -4,7 +4,6 @@ import Styles from './styles';
 import Filters from 'components/Filters';
 import BreadCrumb from 'components/BreadCrumb';
 import useWindowSize from 'hooks/useWindowSize';
-// import Icon from 'components/Icon';
 import { useSelector } from 'react-redux';
 
 const ProductList = ({ breadcrumb, ...props }) => {
@@ -12,12 +11,10 @@ const ProductList = ({ breadcrumb, ...props }) => {
   const searchState = useSelector((state) => state.search);
   const { results, filters } = searchState;
   const hasProducts = Boolean(results && results.length);
-
+  // TODO filtro mobile y ordenamiento
+  // TODO arreglar filtro responsive
   return (
     <Styles.Wrapper {...props}>
-      {/* <Styles.ButtonFilter baseButton onClick={() => null}>
-        <Icon name="cart" size={28} />
-      </Styles.ButtonFilter> */}
       {!hasProducts && <Styles.EmptyResult text="No products available" />}
       {hasProducts && (
         <>
