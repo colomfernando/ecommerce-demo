@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/colomfernando/ecommerce-demo)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/colomfernando/ecommerce-demo)
 
-This is a tool to generate random password.
+Ecommerce demo were you can search and buy fashion products
 
 [Live demo](https://ecommerce-demo-shop.netlify.app/)
 
