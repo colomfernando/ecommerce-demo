@@ -1,12 +1,10 @@
-import { arrayOf, shape, string, number } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
 import Filters from 'components/Filters';
-import BreadCrumb from 'components/BreadCrumb';
 import useWindowSize from 'hooks/useWindowSize';
 import { useSelector } from 'react-redux';
 
-const ProductList = ({ breadcrumb, ...props }) => {
+const ProductList = ({ ...props }) => {
   const responsive = useWindowSize();
   const searchState = useSelector((state) => state.search);
   const { results, filters } = searchState;
@@ -18,8 +16,6 @@ const ProductList = ({ breadcrumb, ...props }) => {
       {!hasProducts && <Styles.EmptyResult text="No products available" />}
       {hasProducts && (
         <>
-          {breadcrumb && <BreadCrumb categories={breadcrumb} />}
-
           {responsive.lg && (
             <Styles.Aside>
               <Filters filters={filters} />{' '}
@@ -35,21 +31,6 @@ const ProductList = ({ breadcrumb, ...props }) => {
       )}
     </Styles.Wrapper>
   );
-};
-
-ProductList.propTypes = {
-  breadcrumb: arrayOf(
-    shape({
-      name: string,
-      value: string,
-      id: number,
-      link: string,
-    })
-  ).isRequired,
-};
-
-ProductList.defaultProps = {
-  breadcrumb: [],
 };
 
 export default ProductList;

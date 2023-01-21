@@ -6,6 +6,7 @@ import useParamsUrl from 'hooks/useParamsUrl';
 import searchProducts from 'services/product/searchProducts';
 import getCategoriesFromUrl from 'utils/getCategoriesFromUrl';
 import useBreadcrumb from 'hooks/useBreadcrumb';
+import BreadCrumb from 'components/BreadCrumb';
 import { useDispatch } from 'react-redux';
 import {
   setFiltersAction,
@@ -46,7 +47,8 @@ const Category = () => {
 
   return (
     <MainLayout>
-      <ProductList breadcrumb={breadcrumb} />
+      <BreadCrumb categories={breadcrumb} />
+      <ProductList />
     </MainLayout>
   );
 };

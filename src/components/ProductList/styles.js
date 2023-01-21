@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   position: relative;
-  padding-top: 80px;
+  padding: 50px 15px 0;
 `;
 const Aside = styled.aside`
   flex-basis: 20%;
