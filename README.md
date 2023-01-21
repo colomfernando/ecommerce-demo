@@ -19,3 +19,9 @@ Ecommerce demo were you can search and buy fashion products
 - test (jest)
 - start (dev)
 - build (production)
+
+### pending tasks
+
+- Add mobile filters
+- Add mobile banners
+- Categories menu responsive
