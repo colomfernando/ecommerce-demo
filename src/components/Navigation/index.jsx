@@ -44,6 +44,7 @@ const Navigation = ({ categories, ...props }) => {
             {!!activeCategories.length &&
               activeCategories.map((cat) => (
                 <Category
+                  cbOnClick={handleOnMouseLeave}
                   key={cat.id}
                   name={cat.name}
                   href={cat.link}

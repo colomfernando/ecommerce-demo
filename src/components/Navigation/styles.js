@@ -39,7 +39,7 @@ const Categories = styled.div`
   right: 0;
   background-color: ${colors.white};
   box-shadow: 0px 3px 20px -10px rgba(0, 0, 0, 0.6);
-  transition: all 0.5s;
+  transition: all 0.2s;
   overflow: hidden;
   max-height: ${({ isOpen }) => (isOpen ? '250px' : '0')};
   min-height: ${({ isOpen }) => (isOpen ? '250px' : '0')};

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from 'theme/colors';
+import LinkRoute from 'components/LinkRoute';
 
 const Wrapper = styled.div`
   padding: 0 10px;
@@ -8,7 +9,7 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
 `;
 
-const Link = styled.a`
+const Link = styled(LinkRoute)`
   cursor: pointer;
   color: inherit;
   text-decoration: inherit;

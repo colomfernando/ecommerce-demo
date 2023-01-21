@@ -1,16 +1,18 @@
-import { string, shape, oneOf, number, arrayOf } from 'prop-types';
+import { string, shape, oneOf, number, arrayOf, func } from 'prop-types';
 import React from 'react';
 import Styles from './styles';
 
-const Category = ({ name, href, subcategories }) => {
+const Category = ({ cbOnClick, name, href, subcategories }) => {
   if (!name) return null;
   return (
     <Styles.Wrapper>
-      <Styles.Category href={href}>{name}</Styles.Category>
+      <Styles.Category cbOnClick={cbOnClick} to={href}>
+        {name}
+      </Styles.Category>
       {subcategories &&
         subcategories.length &&
         subcategories.map((sub) => (
-          <Styles.SubCategory key={sub.id} href={sub.link}>
+          <Styles.SubCategory cbOnClick={cbOnClick} key={sub.id} to={sub.link}>
             {sub.name}
           </Styles.SubCategory>
         ))}
@@ -20,6 +22,7 @@ const Category = ({ name, href, subcategories }) => {
 
 Category.propTypes = {
   name: string.isRequired,
+  cbOnClick: func,
   href: string.isRequired,
   subcategories: arrayOf(
     shape({
