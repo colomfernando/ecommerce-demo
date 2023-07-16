@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-      - uses: colomfernando/action-release-notification
+      - uses: https://github.com/colomfernando/action-release-notification
         with:
           pkgName: 'ecommerce-demo'
           slackUrl: 'test.com'
